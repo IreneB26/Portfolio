@@ -1,0 +1,15 @@
+h1{
+    /* background-image:linear-gradient(to bottom right, #0500ff 0%, #bd00ff 100%) 1;  */
+   
+   
+    /* color:#fff;
+background-image: linear-gradient(50deg,#0500ff 0%,#bd00ff 100%);
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text; */
+/* color:#fff; */
+
+
+background: linear-gradient(to bottom right, #0500ff 0%, #bd00ff 50%,#bd00ff 100%);
+-webkit-background-clip: text;
+color: transparent; 
+}
