@@ -1,0 +1,86 @@
+aside{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.line_aside{
+    display: flex;
+    height: 100vh;  
+    width: 1px;
+    justify-content: space-between;
+}
+
+.hr{
+height: 35%;
+border:1px solid transparent;
+background-origin: border-box;
+background-clip: content-box, border-box;
+}
+
+.top_hr{
+    background-image: linear-gradient(white, white), linear-gradient( to bottom, #0500ff,#bd00ff);
+
+}
+
+.bottom_hr{
+    background-image: linear-gradient(white, white), linear-gradient( to top, #0500ff,#bd00ff);
+
+}
+
+
+.content_email{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact_aside{
+
+    background: linear-gradient(to right bottom, #0500ff 0%, #0500ff 50%, #bd00ff 50%,#bd00ff 100%);
+    background-clip: text;
+    color: transparent; 
+    font-family: 'Syncopate', sans-serif;
+
+}
+
+
+
+
+.contact_aside{
+    position: relative;}
+    .contact_aside:before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height:100%;
+      bottom: 0;
+      margin: 0px -10px;
+      background: linear-gradient( to bottom, #0500ff,#bd00ff);;
+      visibility: hidden;
+      transform: scaleY(0);
+      transition: all 0.4s ease-in-out 0s;
+    }
+    .contact_aside:hover:before {
+      visibility: visible;
+      
+      transform: scaleY(1);
+    }
+  
+
+.icons_social_aside{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:40px;
+    transform: rotate(90deg);
+    flex-direction: column;
+}
+

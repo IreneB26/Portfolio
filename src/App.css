@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Syncopate&display=swap');
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+p,a,button{
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+
 
 

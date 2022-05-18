@@ -1,15 +1,9 @@
-h1{
-    /* background-image:linear-gradient(to bottom right, #0500ff 0%, #bd00ff 100%) 1;  */
-   
-   
-    /* color:#fff;
-background-image: linear-gradient(50deg,#0500ff 0%,#bd00ff 100%);
-    -webkit-text-fill-color: transparent;
-	-webkit-background-clip: text; */
-/* color:#fff; */
+h1,h2,h3,h4,h5,h6{
 
+    background: linear-gradient(to right bottom, #0500ff 0%, #bd00ff 50% ,#bd00ff 100%);
+    background-clip: text;
+    color: transparent; 
+    font-family: 'Syncopate', sans-serif;
 
-background: linear-gradient(to bottom right, #0500ff 0%, #bd00ff 50%,#bd00ff 100%);
--webkit-background-clip: text;
-color: transparent; 
 }
+
