@@ -12,11 +12,7 @@ function App() {
     <div className="App">
 
 
-        <section className='aside'>
-          
-          <ContactAside/>
-          
-        </section>
+        
 
   
 
@@ -29,6 +25,12 @@ function App() {
               
             </Routes>
        </section>
+       
+       <section className='aside'>
+          
+          <ContactAside/>
+          
+        </section>
 
 
         <NavMenu/>

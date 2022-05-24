@@ -29,14 +29,27 @@ export default function Index(){
                         <p className="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum distinctio quos voluptas vel! Labore vero nam hic minus perspiciatis eum nesciunt consectetur sapiente rerum dicta. Corporis vitae aperiam impedit pariatur!
                         Aliunt! Similique, praesentium labore! Quasi quisquam corrupti quia facere earum sequi, nesciunt iste temporibus voluptatem eos molestias laboriosam maxime accusamus aperiam, architecto nisi mollitia.</p>
                     </Button>
-                   
+                
+                
                    
                </article>
 
+               </section>
 
 
 
-             </section>
+        <section className="skills">
+
+        <Titulo contenido="Skills"/>
+
+<p>lorem*30</p>
+
+            
+
+
+
+        </section>
+
         </>
 
 )

@@ -9,16 +9,20 @@
 
 .App{
   display: flex;
+  flex-direction: column;
 }
 
 .aside{
   width: 10vw;
   height: 100vh;
+  position: fixed;
+  left: 0;
 }
 
 .contain{
   width: 80vw;
   height: 100vh;
+  margin-left: 10vh;
 }
 
 .menu{
@@ -38,19 +42,23 @@ a{
 
 @media (max-width: 768px) {
   .App{
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .aside{
+    
     width: 100vw;
     height: 10vh;
     position: fixed;
     bottom: 0;
+    
   }
 
   .contain{
+    margin-top: 10vh;
     width: 100vw;
     height: 80vh;
+    margin-left: 0vh
   }
 
   .menu{

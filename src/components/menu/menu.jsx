@@ -25,11 +25,6 @@ export default function NavMenu(props){
 
         <article className={isOpen === true ? ' active_contain' : 'content_menu'} >
 
-        <div className='close_menu'>
-            
-        
-
-        </div>
 
             <ul className='List_menu'>
                
