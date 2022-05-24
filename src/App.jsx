@@ -1,20 +1,38 @@
 import './App.css';
 
-import Button from './components/button/button';
 import ContactAside from './components/contact-sidebar/contact-aside';
-import Titulo from './components/titulos/titulo';
+
+import { Route, Routes} from 'react-router-dom';
+
+import Index from './pages/index';
+import NavMenu from './components/menu/menu';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       
-      </header>
-
-      <ContactAside></ContactAside>
-      <Titulo contenido="Irene Barragán"></Titulo>
 
 
+        <section className='aside'>
+          
+          <ContactAside/>
+          
+        </section>
+
+  
+
+    
+
+       <section className='contain'>
+            <Routes>
+                
+              <Route path="/" element={<Index />} />
+              
+            </Routes>
+       </section>
+
+
+        <NavMenu/>
+    
     </div>
   );
 }

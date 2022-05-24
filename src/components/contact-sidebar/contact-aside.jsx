@@ -9,7 +9,7 @@ export default function Contact_aside(){
 
                 <hr className="hr top_hr"/>
 
-                <section className="icons_social_aside">
+                <article className="icons_social_aside">
 
                    <a href="https://www.linkedin.com/in/irene-bargues-garc%C3%ADa-350250134/" target="_blank" rel="noreferrer">
                         <Linkedin color='black' size='large' /> 
@@ -18,7 +18,7 @@ export default function Contact_aside(){
                         <Github color='black' size='large' />
                    </a>
                     
-                </section>
+                </article>
 
                 <hr className="hr bottom_hr"/>
                

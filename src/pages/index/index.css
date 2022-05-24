@@ -1,0 +1,45 @@
+
+
+.section_info{
+
+    margin-top: 10vh;
+    padding: 30px;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.image_principal{
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.info_principal{
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+    
+}
+
+.descripcion{
+    padding-right: 15%;
+}
+
+.tittle{
+    background: linear-gradient(to right bottom, #0500ff 0%, #bd00ff 50% ,#bd00ff 100%);
+    background-clip: text;
+    color: transparent; 
+    font-family: 'Syncopate', sans-serif;
+    font-size: 16px;
+
+  margin:5px;
+}
