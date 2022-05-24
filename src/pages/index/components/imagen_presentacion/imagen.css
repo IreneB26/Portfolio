@@ -4,7 +4,7 @@
      min-width: 25%;
     display: flex;
     
-    padding: 30px;
+    margin-right: 30px;
     flex-direction: column;
     cursor: grab;
     
@@ -49,3 +49,27 @@
     
    
 }
+
+
+
+@media (max-width: 768px) {
+    
+     
+    .contain_img_presentacion {
+        max-width: 75%;
+        min-width: 25%;
+       
+         margin-right: 0;
+        
+    }
+
+   
+
+   
+    
+   
+    
+    }
+    
+   
+        

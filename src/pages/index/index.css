@@ -43,3 +43,58 @@
 
   margin:5px;
 }
+
+
+@media (max-width: 768px) {
+    
+.section_info {
+   
+    width: 100vw;
+
+}
+
+.image_principal {
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+}
+
+
+@media (max-width: 600px) {
+    .section_info{
+
+        margin-top: 10vh;
+        padding: 30px;
+        width: 100vw;
+      
+        flex-direction: column;
+       
+    }
+
+    .descripcion {
+         padding-right: 0; 
+        padding: 0 10%;
+    }
+   
+    
+        .info_principal {
+            width: 100vw;
+            height: 30vh;
+            
+           
+            align-items: center;
+            text-align: center;
+
+            margin-top: 20px;
+        }
+        
+       
+        
+        
+
+}
