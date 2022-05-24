@@ -10,18 +10,31 @@
     align-items: flex-end;
     flex-direction: column-reverse;
     padding: 15px 20px;
+
+   
     
 }
 
+.position_nav_menu{
+    position: relative;
+   
+}
 
-.active{
+
+
+
+.active_contain{
     background: linear-gradient(to right bottom, #0500ff 0%, #bd00ff 50% ,#bd00ff 100%);
     width: 100vw;
     height: 100vh;
     position: fixed;
     display: block;
+    
+   
 
 }
+
+
 
 
 .content_menu{
@@ -54,3 +67,54 @@
     font-weight: bold;
 
 }
+
+
+
+
+
+
+
+
+#navMenu>span{
+    
+    display:block;
+    
+    width:28px;
+    height:2px;
+    border-radius:9999px;
+    background-color:black;
+    
+    
+    
+   
+  }
+  #navMenu>span:not(:last-child){
+    margin-bottom:7px;
+  }
+  #navMenu,#navMenu>span{
+    transition:all .4s ease-in-out;
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+
+  #navMenu.active{
+    transition-delay:0.8s;
+    transform:rotate(45deg);
+   
+  }
+  #navMenu.active>span:nth-child(2){
+   width:0;
+  }
+  #navMenu.active >span:nth-child(1),
+  #navMenu.active >span:nth-child(3){
+    transition-delay:.4s;
+  }
+  #navMenu.active>span:nth-child(1){
+    transform:translateY(9px);
+  }
+  #navMenu.active>span:nth-child(3){
+    transform:translateY(-9px)rotate(90deg);
+  }

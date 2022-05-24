@@ -5,22 +5,30 @@ import "./menu.css"
 export default function NavMenu(props){
 
     const [isOpen, setIsOpen] = useState(false);
+    const [menuActive, setMenuActive] = useState(false);
+
 
 
     return(
         <>
-        <nav  className='nav_menu'>
+        <nav className={isOpen === true ? ' nav_menu position_nav_menu' : 'nav_menu'} >
             
-            <Moon color='black' size='large' />
-            <Menu onClick={() => {setIsOpen(!isOpen)}} color='black' size='large' />
+            <Moon className='theme' color='black' size='large' />
+
+            <div onClick={() => {setIsOpen(!isOpen)}}  className={isOpen === true ? ' active' : ''}  id="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>  
 
         </nav>
 
-        <article className={isOpen === true ? ' active' : 'content_menu'} >
+        <article className={isOpen === true ? ' active_contain' : 'content_menu'} >
 
         <div className='close_menu'>
-            <Close  onClick={() => {setIsOpen(!isOpen)}} color='black' size='large' />
             
+        
+
         </div>
 
             <ul className='List_menu'>
@@ -28,7 +36,7 @@ export default function NavMenu(props){
                 <li className='Link_menu'>Sobre mi</li>
                 <li className='Link_menu'>Trabajos</li>
                 <li className='Link_menu'>Contacto</li>
-                
+
             </ul>
 
         </article>
