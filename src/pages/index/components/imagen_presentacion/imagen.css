@@ -1,6 +1,7 @@
 .contain_img_presentacion{
-    width: 50%;
-    height: 50%;
+    max-width: 60%; 
+    
+     min-width: 25%;
     display: flex;
     
     padding: 30px;

@@ -83,3 +83,36 @@ background-clip: content-box, border-box;
     flex-direction: column;
 }
 
+
+
+
+@media (max-width: 768px) {
+
+    aside{
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);        
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 10vh;
+        position: relative;
+    }
+    
+    .icons_social_aside {
+       
+        transform: rotate(0deg);
+        flex-direction: row;
+    }
+
+    .hr {
+        width: 35%;
+       
+    }
+
+    .line_aside {
+       
+        height: 1px;
+        width: 100vw;
+        
+    }
+}

@@ -36,5 +36,27 @@ a{
 }
 
 
+@media (max-width: 768px) {
+  .App{
+    flex-direction: column-reverse;
+  }
+
+  .aside{
+    width: 100vw;
+    height: 10vh;
+  }
+
+  .contain{
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .menu{
+    width: 100vw;
+    height: 10vh;
+  }
+}
+
+
 
 
