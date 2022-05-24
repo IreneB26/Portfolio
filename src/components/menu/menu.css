@@ -76,11 +76,11 @@
 
 
 #navMenu>span{
-    
+
     display:block;
     
-    width:28px;
-    height:2px;
+    width:40px;
+    height:5px;
     border-radius:9999px;
     background-color:black;
     
@@ -104,17 +104,23 @@
     transition-delay:0.8s;
     transform:rotate(45deg);
    
+   
   }
   #navMenu.active>span:nth-child(2){
    width:0;
+   
   }
   #navMenu.active >span:nth-child(1),
   #navMenu.active >span:nth-child(3){
+    background-color:white;
     transition-delay:.4s;
   }
   #navMenu.active>span:nth-child(1){
-    transform:translateY(9px);
+    transform:translateY(12px);
+    
+    
   }
   #navMenu.active>span:nth-child(3){
-    transform:translateY(-9px)rotate(90deg);
+    transform:translateY(-12px)rotate(90deg);
+   
   }
