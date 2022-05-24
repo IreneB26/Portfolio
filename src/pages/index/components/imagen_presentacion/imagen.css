@@ -1,17 +1,23 @@
 .contain_img_presentacion{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    
     padding: 30px;
     flex-direction: column;
+    cursor: grab;
+    
+}
+
+.contain_img_presentacion:active{
+  
+    cursor: grabbing;
     
 }
 
 .tittle_img{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     border: solid 1px transparent;
     
     background-image: linear-gradient(white, white), linear-gradient( 150deg, #0500ff,#bd00ff);
@@ -27,8 +33,8 @@
 }
 
 .imagen_presentacion{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
