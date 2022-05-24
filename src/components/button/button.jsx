@@ -6,7 +6,7 @@ export default function Button(props){
         <>
             {props.children}
             
-            <button>{props.contenido}</button>
+            <button><p className="content_button">{props.contenido}</p></button>
             
         </>
     )

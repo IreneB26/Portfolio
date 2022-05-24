@@ -1,7 +1,8 @@
 button{
  
-    width: 75px;
-    height: 35px;
+    /* width: 75px;
+    height: 35px; */
+    
     border: solid 1px transparent;
     border-radius: 5px;
     background-image: linear-gradient(white, white), linear-gradient( 150deg, #0500ff,#bd00ff);
@@ -11,6 +12,19 @@ button{
     
     font-size: 20px;
     transition: all 0.1s;
+
+
+
+
+}
+
+.content_button{
+    background: linear-gradient(to right bottom, #0500ff 0%, #bd00ff 50% ,#bd00ff 100%);
+    background-clip: text;
+    color: transparent; 
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1rem;
+    margin: 10px;
 }
 
 
