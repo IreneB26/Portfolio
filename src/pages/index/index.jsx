@@ -1,6 +1,8 @@
 import Button from "../../components/button/button";
 import ContactAside from "../../components/contact-sidebar/contact-aside";
 import Titulo from "../../components/titulos/titulo";
+import CardSkill from "./components/card_skill/card_skill";
+import Formacion from "./components/formacion/formacion";
 import Imagen from "./components/imagen_presentacion/imagen";
 
 import "./index.css";
@@ -40,12 +42,40 @@ export default function Index(){
 
         <section className="skills">
 
-        <Titulo contenido="Skills"/>
+        <article className="skill_tittle">
+            <Titulo contenido="Skills"/>
+        </article>
 
-<p>lorem*30</p>
+        <article className="contain_skills">
+        <CardSkill> 
+                <p className="title_card">Title</p>
+        </CardSkill>
+            
+        <CardSkill> 
+            <p className="title_card">Title</p>
+        </CardSkill>
+
+        <CardSkill> 
+            <p className="title_card">Title</p>
+        </CardSkill>
+
+        <CardSkill> 
+            <p className="title_card">Title</p>
+        </CardSkill>
+
+        </article>
 
             
 
+
+
+        </section>
+
+
+
+        <section className="formacion">
+
+<Formacion></Formacion>
 
 
         </section>

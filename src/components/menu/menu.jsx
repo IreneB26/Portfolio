@@ -5,7 +5,6 @@ import "./menu.css"
 export default function NavMenu(props){
 
     const [isOpen, setIsOpen] = useState(false);
-    const [menuActive, setMenuActive] = useState(false);
 
 
 

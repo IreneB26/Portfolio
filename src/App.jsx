@@ -14,26 +14,26 @@ function App() {
 
         
 
-  
+<NavMenu/>
 
     
 
-       <section className='contain'>
+       {/* <section className='contain'> */}
             <Routes>
                 
               <Route path="/" element={<Index />} />
               
             </Routes>
-       </section>
+       {/* </section> */}
        
-       <section className='aside'>
+       {/* <section className='aside'> */}
           
           <ContactAside/>
           
-        </section>
+        {/* </section> */}
 
 
-        <NavMenu/>
+       
     
     </div>
   );
