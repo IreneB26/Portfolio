@@ -5,7 +5,10 @@
     position: relative;
 
     /* Border */
-    border-bottom: 1px solid #71717a;
+    border-bottom: 1px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient( to right bottom, #0500ff,#bd00ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 
     /* Take full width */
     width: 100%;
@@ -22,12 +25,17 @@
     width: 2rem;
 
     /* Misc */
-    background: #71717a;
+    background: linear-gradient(to right bottom, #0500ff 0%,#bd00ff 100%);
+
 }
 
 /* Styles for even items */
 .zigzag-timeline__item:nth-child(2n) {
-    border-left: 1px solid #71717a;
+
+    border-left: 1px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient( to bottom, #0500ff,#bd00ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 .zigzag-timeline__item:nth-child(2n) .zigzag-timeline__milestone {
     left: 0;
@@ -36,7 +44,12 @@
 
 /* Styles for odd items */
 .zigzag-timeline__item:nth-child(2n + 1) {
-    border-right: 1px solid #71717a;
+   
+
+    border-right: 1px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient( to bottom, #0500ff,#bd00ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 .zigzag-timeline__item:nth-child(2n + 1) .zigzag-timeline__milestone {
     right: 0;
@@ -54,10 +67,20 @@
 
 .right_title{
     text-align: right;
+    padding: 5px;
 }
 
 .left_title{
     text-align: left;
+    padding: 5px;
+}
+
+.left{
+    text-align: right;
+}
+
+.info_formacion{
+    padding: 10px;
 }
 
 
