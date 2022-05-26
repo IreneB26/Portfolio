@@ -1,29 +1,29 @@
 { "frontend" : [
     
-    { "name": "HTML", "image": "/public/imagenes/logos/html5.svg"},
-    { "name": "CSS", "image": "https://placekitten.com/200/100"},
-    { "name": "JavaScript", "image": "https://placekitten.com/200/200"},
-    { "name": "SCSS","image": "https://placekitten.com/200/400"},
-    { "name": "React", "image": "https://placekitten.com/200/400" }
+    { "name": "HTML", "image": "/public/imagenes/logos/html5.svg", "alt": "imagen logo HTML"},
+    { "name": "CSS", "image": "https://placekitten.com/200/100", "alt": "imagen logo CSS"},
+    { "name": "JavaScript", "image": "https://placekitten.com/200/200", "alt": "imagen logo JavaScript"},
+    { "name": "SCSS","image": "https://placekitten.com/200/400", "alt": "imagen logo SCSS"},
+    { "name": "React", "image": "https://placekitten.com/200/400", "alt": "imagen logo React" }
 
   
   ], 
   "backend" : [
     
-    { "name": "PHP", "image": "https://placekitten.com/200/300"},
-    { "name": "Python", "image": "https://placekitten.com/200/100"}
+    { "name": "PHP", "image": "https://placekitten.com/200/300", "alt": "imagen logo PHP"},
+    { "name": "Python", "image": "https://placekitten.com/200/100", "alt": "imagen logo Python"}
   
   ],
   "database" : [
     
-    { "name": "MongoDB", "image": "https://placekitten.com/200/300"},
-    { "name": "MySQL", "image": "https://placekitten.com/200/100"}
+    { "name": "MongoDB", "image": "https://placekitten.com/200/300", "alt": "imagen logo MongoDB"},
+    { "name": "MySQL", "image": "https://placekitten.com/200/100", "alt": "imagen logo MySQL"}
   
   ],
   "tools" : [
     
-    { "name": "Figma", "image": "https://placekitten.com/200/300"},
-    { "name": "Git", "image": "https://placekitten.com/200/100"}
+    { "name": "Figma", "image": "https://placekitten.com/200/300", "alt": "imagen logo Figma"},
+    { "name": "Git", "image": "https://placekitten.com/200/100", "alt": "imagen logo Git"}
   
   ]
 }

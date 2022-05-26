@@ -45,26 +45,10 @@ a{
     flex-direction: column;
   }
 
-  .aside{
-    
-    width: 100vw;
-    height: 10vh;
-    position: relative;
-    bottom: 0;
-    
+  h1{
+    font-size: 2rem;
   }
-
-  .contain{
-    margin-top: 10vh;
-    width: 100vw;
-    height: 100vh;
-    margin-left: 0vh
-  }
-
-  .menu{
-    width: 100vw;
-    height: 10vh;
-  }
+ 
 }
 
 

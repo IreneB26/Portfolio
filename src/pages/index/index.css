@@ -210,6 +210,16 @@
 
 
 
+@media (max-width: 1024px){
+    .contain_skills {
+      
+        grid-column-gap: 5vw;
+     
+        
+    }
+}
+
+
 
 @media (max-width: 600px) {
     .section_info{
@@ -271,5 +281,18 @@
     padding: 30px;
 }
 
+.contain_skills {
+   
+    grid-template-columns: repeat(1, 5fr);
+   
+}
 
+}
+
+@media (max-width: 375px) {
+    .img_skill {
+        width: 49px;
+        height: 49px;
+       
+    }
 }
