@@ -68,11 +68,11 @@ export default function Index(){
                 <article>
                     { front.map((img) => 
                        
-                        <div class="tooltip">
+                        <div className="tooltip">
 
                            <img className="img_skill" src={`${img.image}`} alt={`${img.alt}`}></img>
 
-                            <span class="tooltiptext">{img.name}</span>
+                            <span className="tooltiptext">{img.name}</span>
 
                         </div>
                         
@@ -89,11 +89,11 @@ export default function Index(){
                 <article>
                     { back.map((img) => 
                        
-                        <div class="tooltip">
+                        <div className="tooltip">
 
                            <img className="img_skill" src={`${img.image}`} alt={`${img.alt}`}></img>
 
-                            <span class="tooltiptext">{img.name}</span>
+                            <span className="tooltiptext">{img.name}</span>
 
                         </div>
                         
@@ -109,11 +109,11 @@ export default function Index(){
                 <article>
                     { database.map((img) => 
                        
-                        <div class="tooltip">
+                        <div className="tooltip">
 
                            <img className="img_skill" src={`${img.image}`} alt={`${img.alt}`}></img>
 
-                            <span class="tooltiptext">{img.name}</span>
+                            <span className="tooltiptext">{img.name}</span>
 
                         </div>
                         
@@ -129,11 +129,11 @@ export default function Index(){
                 <article>
                     { tools.map((img) => 
                        
-                        <div class="tooltip">
+                        <div className="tooltip">
 
                            <img className="img_skill" src={`${img.image}`} alt={`${img.alt}`}></img>
 
-                            <span class="tooltiptext">{img.name}</span>
+                            <span className="tooltiptext">{img.name}</span>
 
                         </div>
                         

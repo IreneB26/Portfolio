@@ -1,0 +1,9 @@
+.Proyectos_title{
+    margin-top: 10vh;
+    padding: 30px;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vh;
+}

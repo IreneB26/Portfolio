@@ -1,11 +1,16 @@
 import { Moon } from 'grommet-icons';
 import { useState } from 'react';
+
+import { Link } from 'react-router-dom';
+
+
 import "./menu.css"
 
 export default function NavMenu(props){
 
     const [isOpen, setIsOpen] = useState(false);
 
+ 
 
 
     return(
@@ -27,9 +32,9 @@ export default function NavMenu(props){
 
             <ul className='List_menu'>
                
-                <li className='Link_menu'>Sobre mi</li>
-                <li className='Link_menu'>Trabajos</li>
-                <li className='Link_menu'>Contacto</li>
+                <Link to="/"> <li onClick={() => {setIsOpen(!isOpen)}} className='Link_menu'>Sobre mi</li></Link>
+                <Link to="/proyectos"><li onClick={() => {setIsOpen(!isOpen)}} className='Link_menu'>Trabajos</li></Link>
+                    <li onClick={() => {setIsOpen(!isOpen)}} className='Link_menu'>Contacto</li>
 
             </ul>
 
