@@ -1,4 +1,4 @@
-import { Menu, Moon, Close } from 'grommet-icons';
+import { Moon } from 'grommet-icons';
 import { useState } from 'react';
 import "./menu.css"
 
@@ -12,7 +12,7 @@ export default function NavMenu(props){
         <>
         <nav className={isOpen === true ? ' nav_menu position_nav_menu' : 'nav_menu'} >
             
-            <Moon className='theme' color='black' size='large' />
+            <Moon className={isOpen === true ? ' theme opacity' : 'theme'}  color='black' size='large' />
 
             <div onClick={() => {setIsOpen(!isOpen)}}  className={isOpen === true ? ' active' : ''}  id="navMenu">
                 <span></span>

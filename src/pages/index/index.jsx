@@ -5,10 +5,17 @@ import CardSkill from "./components/card_skill/card_skill";
 import Formacion from "./components/formacion/formacion";
 import Imagen from "./components/imagen_presentacion/imagen";
 
+import SkillInfo from "../../data/info.json"
+
 import "./index.css";
 
 
 export default function Index(){
+
+    const front = SkillInfo.frontend;
+    const back = SkillInfo.backend;
+    const database = SkillInfo.database;
+    const tools = SkillInfo.tools;
 
     return(
         
@@ -47,20 +54,79 @@ export default function Index(){
         </article>
 
         <article className="contain_skills">
-        <CardSkill> 
-                <p className="title_card">Title</p>
-        </CardSkill>
+
+
+        
+            <CardSkill> 
+          
+                    <section>
+                        <p className="title_card">Front-end</p>
+                    </section>
+         
+                  <article>
+                        { front.map((img) => 
+                       
+                       <div class="tooltip">
+                           <img className="img_skill" src={`${img.image}`}></img>
+                        <span class="tooltiptext">{img.name}</span>
+                        </div>
+                        
+                      
+ 
+                        )}  
+                    </article>
+            </CardSkill>
+         
             
         <CardSkill> 
-            <p className="title_card">Title</p>
+        <section>
+                        <p className="title_card">Backend</p>
+                    </section>
+         
+                  <article>
+                        { back.map((img) => 
+                       
+                       <div class="tooltip">
+                       <img className="img_skill" src={`${img.image}`}></img>
+                    <span class="tooltiptext">{img.name}</span>
+                    </div>
+
+                        )}  
+                    </article>
         </CardSkill>
 
         <CardSkill> 
-            <p className="title_card">Title</p>
+        <section>
+                        <p className="title_card">Database</p>
+                    </section>
+         
+                  <article>
+                        { database.map((img) => 
+                       
+                           <div class="tooltip">
+                           <img className="img_skill" src={`${img.image}`}></img>
+                        <span class="tooltiptext">{img.name}</span>
+                        </div>
+
+                        )}  
+                    </article>
         </CardSkill>
 
         <CardSkill> 
-            <p className="title_card">Title</p>
+        <section>
+                        <p className="title_card">Tools</p>
+                    </section>
+         
+                  <article>
+                        { tools.map((img) => 
+                       
+                           <div class="tooltip">
+                           <img className="img_skill" src={`${img.image}`}></img>
+                        <span class="tooltiptext">{img.name}</span>
+                        </div>
+                        
+                        )}  
+                    </article>
         </CardSkill>
 
         </article>
@@ -75,7 +141,7 @@ export default function Index(){
 
         <section className="formacion">
 
-<Formacion></Formacion>
+        <Formacion></Formacion>
 
 
         </section>

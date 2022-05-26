@@ -1,0 +1,29 @@
+{ "frontend" : [
+    
+    { "name": "HTML", "image": "/public/imagenes/logos/html5.svg"},
+    { "name": "CSS", "image": "https://placekitten.com/200/100"},
+    { "name": "JavaScript", "image": "https://placekitten.com/200/200"},
+    { "name": "SCSS","image": "https://placekitten.com/200/400"},
+    { "name": "React", "image": "https://placekitten.com/200/400" }
+
+  
+  ], 
+  "backend" : [
+    
+    { "name": "PHP", "image": "https://placekitten.com/200/300"},
+    { "name": "Python", "image": "https://placekitten.com/200/100"}
+  
+  ],
+  "database" : [
+    
+    { "name": "MongoDB", "image": "https://placekitten.com/200/300"},
+    { "name": "MySQL", "image": "https://placekitten.com/200/100"}
+  
+  ],
+  "tools" : [
+    
+    { "name": "Figma", "image": "https://placekitten.com/200/300"},
+    { "name": "Git", "image": "https://placekitten.com/200/100"}
+  
+  ]
+}
