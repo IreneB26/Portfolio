@@ -5,5 +5,62 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin-left: 10vh;
 }
+
+
+.descripcion_proyecto{
+    width: 60vw;
+    margin-top: 50px;
+    /* padding: 0 15%; */
+}
+
+.img_proyecto{
+    margin-top: 50px;
+    border: 1px solid red;
+
+    width: 60vw;
+    height: 30vh;
+}
+
+.skill_proyecto{
+    display: flex;
+    width: 60vw;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.img_skill_proyecto{
+    width: 60px;
+    height: 60px;
+   border: 1px solid red;
+   margin-right: 30px;
+}
+
+
+.button_proyectos{
+    display: flex;
+    width: 35vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 50px;
+}
+
+.tittle_tools_contain{
+    width: 60vw;
+    
+}
+
+.tittle_tools{
+    margin-bottom: 40px;
+
+}
+
+.img_skill_container{
+    width: 60vw;
+}
+

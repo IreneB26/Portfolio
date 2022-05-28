@@ -1,3 +1,4 @@
+import Button from "../../components/button/button"
 import Titulo from "../../components/titulos/titulo"
 import "./proyectos.css"
 
@@ -5,13 +6,48 @@ import "./proyectos.css"
 export default function Proyectos(){
 
 return<>
-<article className="Proyectos_title">
+<section className="Proyectos_title">
 
 <Titulo contenido="Proyectos" ></Titulo>
 
+<p className="descripcion_proyecto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi delectus ducimus ratione voluptatum dicta incidunt atque dolore ullam voluptatem neque asperiores eos expedita, quaerat reiciendis quae voluptas enim deleniti.</p>
+
+
+<img src="" className="img_proyecto"></img>
+
+
+
+
+
+<section className="skill_proyecto">
+        
+<article className="tittle_tools_contain">
+        <h2 className="tittle_tools">Tools</h2>
 </article>
 
-<iframe src='https://my.spline.design/macbookprocopy-e1d385be44d31245a0b96abde4ab523e/' frameborder='0' width='100%' height='100%'></iframe>
+
+    <article className="img_skill_container">
+                <img src="" className="img_skill_proyecto"></img>
+                <img src="" className="img_skill_proyecto"></img>
+                <img src="" className="img_skill_proyecto"></img>
+            
+    </article>
+
+</section>
+
+
+<article className="button_proyectos">
+
+        <Button contenido="Ver código"/>
+        <Button contenido="Ver en la web"/>
+                
+
+
+</article>
+
+
+</section>
+
 
         </>
 }
