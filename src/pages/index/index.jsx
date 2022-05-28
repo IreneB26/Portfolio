@@ -4,6 +4,8 @@ import CardSkill from "./components/card_skill/card_skill";
 import Formacion from "./components/formacion/formacion";
 import Imagen from "./components/imagen_presentacion/imagen";
 
+import { motion } from "framer-motion"
+
 
 
 import SkillInfo from "../../data/info.json"
@@ -18,20 +20,37 @@ export default function Index(){
     const database = SkillInfo.database;
     const tools = SkillInfo.tools;
 
+
+
     return(
         
   
         <>
             
         
-            <section className="section_info">
+            <motion.section className="section_info"
+            
+            initial={{ opacity: 0 }}
+            transition={{ duration: 2 }}
+            whileInView={{  opacity: 1 }}
+            
+            >
 
-                <article className="image_principal">
-                    <Imagen> 
+        
+
+                <motion.article className="image_principal"
+                drag
+                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                // dragElastic={0.5}
+                dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
+        
+                
+                > 
+                    <Imagen>
                         <p className="tittle">drag me</p>
                         <p className="tittle">X</p>
                     </Imagen>
-                </article>
+                </motion.article>
 
                 <article className="info_principal">
                     <Titulo contenido="hi, i`m Irene Bargues"/>
@@ -45,14 +64,20 @@ export default function Index(){
                    
                </article>
 
-            </section>
+            </motion.section>
 
 
 
-        <section className="skills">
+        <motion.section className="skills"
+         initial={{ opacity: 0 }}
+         transition={{ duration: 2 }}
+         whileInView={{  opacity: 1 }}>
 
-            <article className="skill_tittle">
-                <Titulo contenido="Skills"/>
+            <article  className="skill_tittle"
+           
+            
+            >
+                <Titulo contenido="Skills"  />
             </article>
 
         <article className="contain_skills">
@@ -143,16 +168,22 @@ export default function Index(){
 
             </article>
 
-        </section>
+        </motion.section>
 
 
 
-        <section className="formacion">
+        <motion.section className="formacion"
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+          whileInView={{  opacity: 1 }}
+          
+          
+          >
 
         <Formacion></Formacion>
 
 
-        </section>
+        </motion.section>
 
         </>
 
