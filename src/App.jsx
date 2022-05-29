@@ -7,6 +7,7 @@ import { Route, Routes} from 'react-router-dom';
 import Index from './pages/index';
 import NavMenu from './components/menu/menu';
 import Proyectos from './pages/proyectos/proyectos';
+import ContainProyectos from './pages/contain_proyectos/containProyectos';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
                     
                   <Route path="/" element={<Index/>} />
                   <Route path="/proyectos" element={<Proyectos/>} />
+
+                  <Route path="/proyectosCard" element={<ContainProyectos/>} />
                   
                 </Routes>
         
