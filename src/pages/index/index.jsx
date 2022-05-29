@@ -31,7 +31,7 @@ export default function Index(){
             <motion.section className="section_info"
             
             initial={{ opacity: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
             whileInView={{  opacity: 1 }}
             
             >
@@ -70,7 +70,7 @@ export default function Index(){
 
         <motion.section className="skills"
          initial={{ opacity: 0 }}
-         transition={{ duration: 2 }}
+         transition={{ duration: 1 }}
          whileInView={{  opacity: 1 }}>
 
             <article  className="skill_tittle"
@@ -174,7 +174,7 @@ export default function Index(){
 
         <motion.section className="formacion"
           initial={{ opacity: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
           whileInView={{  opacity: 1 }}
           
           

@@ -4,17 +4,39 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
+import { motion } from "framer-motion"
+
+
+
+
 import "./menu.css"
 
 export default function NavMenu(props){
 
-    const [isOpen, setIsOpen] = useState(false);
 
+  
+
+
+    const variants = {
+        open: { opacity: 1, x: 0 },
+        closed: { opacity: 0, x: "100%" },
+      }
+
+    const [isOpen, setIsOpen] = useState(false);
+ 
  
 
 
-    return(
-        <>
+    return<>
+
+
+
+
+
+
+
+ 
+
         <nav className={isOpen === true ? ' nav_menu position_nav_menu' : 'nav_menu'} >
             
             <Moon className={isOpen === true ? ' theme opacity' : 'theme'}  color='black' size='large' />
@@ -27,8 +49,13 @@ export default function NavMenu(props){
 
         </nav>
 
-        <article className={isOpen === true ? ' active_contain' : 'content_menu'} >
-
+       
+        <motion.article  className={isOpen === true ? ' active_contain' : 'content_menu'} 
+        
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        
+        >
 
             <ul className='List_menu'>
                
@@ -38,8 +65,8 @@ export default function NavMenu(props){
 
             </ul>
 
-        </article>
+        </motion.article> 
 
         </>
-    )
+    
 }   

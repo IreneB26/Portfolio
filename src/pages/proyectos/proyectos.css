@@ -64,3 +64,22 @@
     width: 60vw;
 }
 
+
+@media (max-width: 768px) {
+    
+    .Proyectos_title {
+       
+        width: 100vw;
+    
+        margin-left: 0vw;
+    
+    
+    }
+  
+    .button_proyectos{
+        width: 60vw;
+    }
+    
+    
+    
+    }
