@@ -1,4 +1,7 @@
 import CardSkill from "../index/components/card_skill/card_skill"
+
+import { Link } from 'react-router-dom';
+
 import "./containProyectos.css"
 
 export default function ContainProyectos(){
@@ -11,6 +14,8 @@ export default function ContainProyectos(){
 <h1>Proyectos</h1>
     
    <article className="cards">
+
+   <Link to="/infoProyecto">
         <CardSkill>
         <section className="head_card">
             
@@ -28,8 +33,9 @@ export default function ContainProyectos(){
           
         </CardSkill>
 
+    </Link>
 
-
+    <Link to="/infoProyecto">
         <CardSkill>
         <section className="head_card">
             
@@ -46,9 +52,9 @@ export default function ContainProyectos(){
             Odit qu</p>
           
         </CardSkill>
+    </Link>
 
-
-
+    <Link to="/infoProyecto">
         <CardSkill>
         <section className="head_card">
             
@@ -65,8 +71,9 @@ export default function ContainProyectos(){
             Odit qu</p>
           
         </CardSkill>
+    </Link>
 
-
+    <Link to="/infoProyecto">
         <CardSkill>
         <section className="head_card">
             
@@ -83,6 +90,7 @@ export default function ContainProyectos(){
             Odit qu</p>
           
         </CardSkill>
+        </Link>
           
    </article>
 </section>
