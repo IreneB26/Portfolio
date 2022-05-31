@@ -8,12 +8,34 @@ import Index from './pages/index';
 import NavMenu from './components/menu/menu';
 import Proyectos from './pages/proyectos/proyectos';
 import ContainProyectos from './pages/contain_proyectos/containProyectos';
+import { useState } from 'react';
+
+
+
+
+
+
+
 
 function App() {
-  return (
-      <div className="App">
 
-        <NavMenu/>
+  const [backgroundColor, setBackgroundColor] = useState("");
+    
+const setStyle = (color) => {
+    setBackgroundColor(color);
+    if(backgroundColor === "black"){
+        setBackgroundColor("");
+    }
+};
+
+
+
+
+  return (
+      <div className={`App ${backgroundColor}`}  >
+        {/* className="App" */}
+
+        <NavMenu changeColor={setStyle}/>
 
          
                 <Routes>

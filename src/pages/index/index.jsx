@@ -22,6 +22,18 @@ export default function Index(){
 
 
 
+
+    let response =  fetch("https://portfolio-89202-default-rtdb.europe-west1.firebasedatabase.app/"
+    ).then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log(error);
+    })
+
+
+
     return(
         
   
