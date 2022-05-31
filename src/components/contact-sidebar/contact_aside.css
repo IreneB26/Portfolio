@@ -147,7 +147,7 @@ background-clip: content-box, border-box;
 
 .black .contact_aside{
     position: relative;}
-    .contact_aside:before {
+    .black .contact_aside:before {
       content: "";
       position: absolute;
       width: 2px;
@@ -159,7 +159,7 @@ background-clip: content-box, border-box;
       transform: scaleY(0);
       transition: all 0.4s ease-in-out 0s;
     }
-    .contact_aside:hover:before {
+   .black .contact_aside:hover:before {
       visibility: visible;
       
       transform: scaleY(1);

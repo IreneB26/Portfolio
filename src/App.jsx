@@ -13,10 +13,6 @@ import { useState } from 'react';
 
 
 
-
-
-
-
 function App() {
 
   const [backgroundColor, setBackgroundColor] = useState("");
