@@ -297,3 +297,57 @@
        
     }
 }
+
+
+
+/* dark mode */
+
+
+.black .tooltip .tooltiptext {
+   
+    background-color: #0C0923;
+    border: solid 1px #FF0000;
+   
+
+ 
+    color:#FFB800;
+   
+  }
+
+  .black .tooltip .tooltiptext::after {
+    content: "";
+
+  
+    border-style: solid;
+    border-color: #FF0000 transparent transparent transparent;
+  }
+
+  .black .tittle{
+    background: linear-gradient(to right bottom, #FF0000 0%, #FFB800 50% ,#FFB800 100%);
+    background-clip: text;
+    color: transparent; 
+   
+
+}
+
+
+.black .title_card{
+    background: linear-gradient(to right bottom, #FF0000 0%, #FFB800 50% ,#FFB800 100%);
+    background-clip: text;
+    color: transparent; 
+   
+    border-bottom: solid 1px #FF0000;
+    
+
+    
+    
+}
+
+
+.black  .descripcion {
+    color: white;
+}
+
+.black .info_formacion{
+    color: white;
+}

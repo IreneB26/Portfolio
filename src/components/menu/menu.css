@@ -155,3 +155,38 @@
 }
 
   }
+
+
+
+  /* modo oscuro */
+
+
+  .black .active_contain{
+    background: linear-gradient(to right bottom, #FF0000 0%, #FFB800 50% ,#FFB800 100%);
+
+}
+
+
+.black .Link_menu{
+  color: black;
+ 
+}
+
+
+.black #navMenu>span{
+
+  
+  background-color:white;
+ 
+  
+ 
+}
+
+
+
+.black #navMenu.active >span:nth-child(1),
+.black #navMenu.active >span:nth-child(3){
+    background-color:black;
+}
+
+

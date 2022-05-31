@@ -10,6 +10,7 @@
 .App{
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .aside{
@@ -52,7 +53,7 @@ a{
 }
 
 .black{
-  background-color: black;
+  background-color: #0C0923;
 }
 
 

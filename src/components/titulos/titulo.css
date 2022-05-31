@@ -12,3 +12,29 @@ h1{
 }
 
 
+/* modo oscuro */
+
+.black h1{
+
+    background: linear-gradient(to right bottom, #FF0000 0%, #FFB800 50% ,#FFB800 100%);
+    background-clip: text;
+    color: transparent; 
+    font-family: 'Syncopate', sans-serif;
+
+}
+
+.black h2{
+    background: linear-gradient(to right bottom, #FF0000 0%, #FFB800 50% ,#FFB800 100%);
+    background-clip: text;
+    color: transparent; 
+    font-family: 'Syncopate', sans-serif;
+}
+
+
+.black h3{
+    background: linear-gradient(to right bottom, #FF0000 0%, #FFB800 50% ,#FFB800 100%);
+    background-clip: text;
+    color: transparent; 
+    font-family: 'Syncopate', sans-serif;
+}
+

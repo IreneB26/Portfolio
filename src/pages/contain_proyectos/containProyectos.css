@@ -1,15 +1,13 @@
-.contain_skillCards{
+.contain_skillCards {
     width: 90vw;
     margin-left: 10vw;
+    height: 100vh;
     padding: 30px;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    
-
 }
 
 .cards{
@@ -41,6 +39,7 @@
 
 .descripcion_cards{
     padding: 10px;
+    color: black;
 }
 
 
@@ -49,6 +48,7 @@
     display: flex;
     padding: 0 10px;
     justify-content: space-around;
+    color: black;
 }
 
 
@@ -68,6 +68,20 @@
         grid-template-columns: repeat(1, 5fr);
 
     }
+}
+
+
+/* dark mode */
+
+.black .descripcion_cards{
+
+    color: white;
+}
+
+
+.black .link_card{
+    
+    color: white;
 }
 
 

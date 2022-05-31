@@ -39,5 +39,38 @@ button:hover{
 
 
 
+/* dark mode */
 
 
+.black button{
+ 
+    /* width: 75px;
+    height: 35px; */
+    
+    border: solid 1px transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(#0C0923, #0C0923), linear-gradient( 150deg, #FF0000,#FFB800);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow:  5px 5px 4px rgb(255 184 0 / 25%);
+
+    
+    font-size: 20px;
+    transition: all 0.1s;
+
+
+
+
+}
+
+.black button:hover{
+    transform: translate(5px,5px);
+    box-shadow:  0px 0px 0px rgb(255 184 0 / 25%);
+}
+
+.black .content_button{
+    background: linear-gradient(to right bottom, #FF0000 0%, #FFB800 50% ,#FFB800 100%);
+    background-clip: text;
+    color: transparent; 
+    
+}
