@@ -1,48 +1,41 @@
-.content_skill{
-    width: 360px;
-    /* height: 20vh;  */
+.content_skill {
+  width: 360px;
+  /* height: 20vh;  */
 
+  border: solid 1px transparent;
+  border-radius: 5px;
 
-    
-    border: solid 1px transparent;
-    border-radius: 5px;
-    
-    background-image: linear-gradient(white, white), linear-gradient( 150deg, #0500ff,#bd00ff);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow:  5px 5px 4px rgb(5 0 255 / 25%);
+  background-image: linear-gradient(white, white),
+    linear-gradient(150deg, #0500ff, #bd00ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 5px 5px 4px rgb(5 0 255 / 25%);
 
-    display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
 
 @media (max-width: 375px) {
-    .content_skill {
-        width: 300px;
-        
-    }
+  .content_skill {
+    width: 300px;
+  }
 }
-
 
 /* dark mode */
 
+.black .content_skill {
+  width: 360px;
+  /* height: 20vh;  */
 
+  border: solid 1px transparent;
+  border-radius: 5px;
 
-.black .content_skill{
-    width: 360px;
-    /* height: 20vh;  */
+  background-image: linear-gradient(#0c0923, #0c0923),
+    linear-gradient(150deg, #ff0000, #ffb800);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 5px 5px 4px rgb(255 184 0 / 25%);
 
-
-    
-    border: solid 1px transparent;
-    border-radius: 5px;
-    
-    background-image: linear-gradient(#0C0923, #0C0923), linear-gradient( 150deg, #FF0000,#FFB800);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow:  5px 5px 4px rgb(255 184 0 / 25%);
-
-    display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

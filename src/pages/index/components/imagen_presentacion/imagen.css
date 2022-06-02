@@ -1,112 +1,89 @@
-.contain_img_presentacion{
-    max-width: 60%; 
-    
-     min-width: 25%;
-    display: flex;
-    
-    margin-right: 30px;
-    flex-direction: column;
-    cursor: grab;
-    
+.contain_img_presentacion {
+  max-width: 60%;
+
+  min-width: 25%;
+  display: flex;
+
+  margin-right: 30px;
+  flex-direction: column;
+  cursor: grab;
 }
 
-.contain_img_presentacion:active{
-  
-    cursor: grabbing;
-    
+.contain_img_presentacion:active {
+  cursor: grabbing;
 }
 
-.tittle_img{
-    width: 100%;
-    height: 100%;
-    border: solid 1px transparent;
-    
-    background-image: linear-gradient(white, white), linear-gradient( 150deg, #0500ff,#bd00ff);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow:  5px 5px 4px rgb(5 0 255 / 25%);
-    border-bottom: none;
+.tittle_img {
+  width: 100%;
+  height: 100%;
+  border: solid 1px transparent;
 
-    display: flex;
-    justify-content: space-between;
-  
-    
+  background-image: linear-gradient(white, white),
+    linear-gradient(150deg, #0500ff, #bd00ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 5px 5px 4px rgb(5 0 255 / 25%);
+  border-bottom: none;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.imagen_presentacion{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.imagen_presentacion {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-     border: solid 1px transparent;
-    
-    background-image: linear-gradient(white, white), linear-gradient( 150deg, #0500ff,#bd00ff);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow:  5px 5px 4px rgb(5 0 255 / 25%);
-    
-   
+  border: solid 1px transparent;
+
+  background-image: linear-gradient(white, white),
+    linear-gradient(150deg, #0500ff, #bd00ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 5px 5px 4px rgb(5 0 255 / 25%);
 }
-
-
 
 @media (max-width: 768px) {
-    
-     
-    .contain_img_presentacion {
-        max-width: 75%;
-        min-width: 25%;
-       
-         margin-right: 0;
-        
-    }
+  .contain_img_presentacion {
+    max-width: 75%;
+    min-width: 25%;
 
-   
+    margin-right: 0;
+  }
+}
 
-   
-    
-   
-    
-    }
+/* dark mode */
 
+.black .tittle_img {
+  width: 100%;
+  height: 100%;
+  border: solid 1px transparent;
 
+  background-image: linear-gradient(#0c0923, #0c0923),
+    linear-gradient(150deg, #ff0000, #ffb800);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 5px 5px 4px rgb(255 184 0 / 25%);
+  border-bottom: none;
 
-    /* dark mode */
-    
-   
-.black .tittle_img{
-        width: 100%;
-        height: 100%;
-        border: solid 1px transparent;
-        
-        background-image: linear-gradient(#0C0923, #0C0923), linear-gradient( 150deg, #FF0000,#FFB800);
-        background-origin: border-box;
-        background-clip: content-box, border-box;
-        box-shadow:  5px 5px 4px rgb(255 184 0 / 25%);
-        border-bottom: none;
-    
-        display: flex;
-        justify-content: space-between;
-      
-        
-    }
+  display: flex;
+  justify-content: space-between;
+}
 
+.black .imagen_presentacion {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  .black  .imagen_presentacion{
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    
-         border: solid 1px transparent;
-        
-         background-image: linear-gradient(#0C0923, #0C0923), linear-gradient( 150deg, #FF0000,#FFB800);
-         background-origin: border-box;
-        background-clip: content-box, border-box;
-        box-shadow:  5px 5px 4px rgb(255 184 0 / 25%);
-        
-       
-    }
+  border: solid 1px transparent;
+
+  background-image: linear-gradient(#0c0923, #0c0923),
+    linear-gradient(150deg, #ff0000, #ffb800);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 5px 5px 4px rgb(255 184 0 / 25%);
+}

@@ -1,24 +1,9 @@
-import "./card_skill.css"
+import "./card_skill.css";
 
-
-export default function CardSkill(props){
-
-    
-
-return <>
-
-
-
-
-        <section className="content_skill">
-        {props.children}
-                    
-          
-        
-
-        </section>
-
-
-</>
-
+export default function CardSkill(props) {
+  return (
+    <>
+      <section className="content_skill">{props.children}</section>
+    </>
+  );
 }

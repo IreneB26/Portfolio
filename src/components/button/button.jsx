@@ -1,13 +1,13 @@
-import "./button.css"
+import "./button.css";
 
-export default function Button(props){
-    return (
-     
-        <>
-            {props.children}
-            
-            <button><p className="content_button">{props.contenido}</p></button>
-            
-        </>
-    )
+export default function Button(props) {
+  return (
+    <>
+      {props.children}
+
+      <button>
+        <p className="content_button">{props.contenido}</p>
+      </button>
+    </>
+  );
 }

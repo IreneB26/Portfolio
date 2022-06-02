@@ -1,7 +1,5 @@
-import "./titulo.css"
+import "./titulo.css";
 
-export default function Titulo(props){
-  return (
-    <h1>{props.contenido}</h1>
-  )
+export default function Titulo(props) {
+  return <h1>{props.contenido}</h1>;
 }
