@@ -8,11 +8,11 @@ export default function ContainProyectos() {
   return (
     <>
       <section className="contain_skillCards">
-        <h1>Proyectos</h1>
+        <h1 className="title_proyectos">Proyectos</h1>
 
         <article className="cards">
           <Link to="/infoProyecto">
-            <CardSkill>
+            <CardSkill clas="hover">
               <section className="head_card">
                 <h2>title</h2>
 

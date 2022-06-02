@@ -10,6 +10,15 @@
   justify-content: center;
 }
 
+.hover:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 0px 0px 0px rgb(5 0 255 / 25%);
+}
+
+.title_proyectos {
+  margin-bottom: 50px;
+}
+
 .cards {
   width: 80vw;
   margin-top: 50px;
@@ -65,4 +74,9 @@
 
 .black .link_card {
   color: white;
+}
+
+.black .hover:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 0px 0px 0px rgb(255 184 0 / 25%);
 }

@@ -8,9 +8,28 @@ import { motion } from "framer-motion";
 import "./menu.css";
 
 export default function NavMenu(props) {
-  const variants = {
-    open: { transition: { duration: 1 }, opacity: 1, x: 0 },
+  const container = {
+    // open: { transition: { duration: 1 }, opacity: 1, x: 0 },
     closed: { transition: { duration: 1 }, opacity: 0, x: "100%" },
+
+    open: {
+      // transition: { duration: 1 },
+      opacity: 1,
+      x: 0,
+
+      transition: {
+        duration: 1,
+        delayChildren: 0.8,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    closed: { opacity: 0 },
+    open: {
+      opacity: 1,
+    },
   };
 
   const [isOpen, setIsOpen] = useState(false);
@@ -48,38 +67,41 @@ export default function NavMenu(props) {
       <motion.article
         className={first === true ? "content_menu " : "active_contain"}
         animate={isOpen ? "open" : "closed"}
-        variants={variants}
+        variants={container}
       >
         <ul className="List_menu">
           <Link to="/">
             {" "}
-            <li
+            <motion.li
+              variants={item}
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
               className="Link_menu"
             >
               Sobre mi
-            </li>
+            </motion.li>
           </Link>
           <Link to="/proyectos">
-            <li
+            <motion.li
+              variants={item}
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
               className="Link_menu"
             >
               Trabajos
-            </li>
+            </motion.li>
           </Link>
-          <li
+          <motion.li
+            variants={item}
             onClick={() => {
               setIsOpen(!isOpen);
             }}
             className="Link_menu"
           >
             Contacto
-          </li>
+          </motion.li>
         </ul>
       </motion.article>
     </>
