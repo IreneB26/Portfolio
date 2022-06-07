@@ -52,4 +52,9 @@ a {
 
 .black {
   background-color: #0c0923;
+  transition: background 500ms;
+}
+.white {
+  background-color: #fff;
+  transition: background 500ms;
 }

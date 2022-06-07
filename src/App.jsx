@@ -10,13 +10,15 @@ import Proyectos from "./pages/proyectos/proyectos";
 import ContainProyectos from "./pages/contain_proyectos/containProyectos";
 import { useState } from "react";
 
+import { motion } from "framer-motion";
+
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("");
 
   const setStyle = (color) => {
     setBackgroundColor(color);
     if (backgroundColor === "black") {
-      setBackgroundColor("");
+      setBackgroundColor("white");
     }
   };
 
