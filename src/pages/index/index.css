@@ -173,6 +173,18 @@
   .contain_skills {
     grid-column-gap: 5vw;
   }
+
+  .section_info {
+    width: 80vw;
+  }
+
+  .skills {
+    width: 80vw;
+  }
+
+  .formacion {
+    width: 80vw;
+  }
 }
 
 @media (max-width: 600px) {
@@ -221,6 +233,10 @@
 
   .contain_skills {
     grid-template-columns: repeat(1, 5fr);
+    grid-row-gap: 5vh;
+  }
+  .section_info {
+    width: 100vw;
   }
 }
 

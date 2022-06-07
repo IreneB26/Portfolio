@@ -48,9 +48,11 @@
 .List_menu {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  height: 75vh;
+  height: 100vh;
+  /* gap: 15%; */
+  margin-left: 50px;
 }
 
 .Link_menu {
@@ -115,6 +117,13 @@
 
   .position_nav_menu {
     position: absolute;
+  }
+
+  .List_menu {
+    align-items: center;
+
+    /* gap: 15%; */
+    margin-left: 0px;
   }
 }
 

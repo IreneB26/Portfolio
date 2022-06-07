@@ -74,6 +74,7 @@ export default function NavMenu(props) {
             {" "}
             <motion.li
               variants={item}
+              whileHover={{ scale: 1.1 }}
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
@@ -85,6 +86,7 @@ export default function NavMenu(props) {
           <Link to="/proyectos">
             <motion.li
               variants={item}
+              whileHover={{ scale: 1.1 }}
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
@@ -95,6 +97,7 @@ export default function NavMenu(props) {
           </Link>
           <motion.li
             variants={item}
+            whileHover={{ scale: 1.1 }}
             onClick={() => {
               setIsOpen(!isOpen);
             }}
