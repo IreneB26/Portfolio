@@ -6,8 +6,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import "./menu.css";
+import Links from "../../data/info.json";
 
 export default function NavMenu(props) {
+  const links = Links.links;
+
+  const [hover, setIsHover] = useState(false);
+
   const container = {
     // open: { transition: { duration: 1 }, opacity: 1, x: 0 },
     closed: { transition: { duration: 1 }, opacity: 0, x: "100%" },
@@ -70,20 +75,31 @@ export default function NavMenu(props) {
         variants={container}
       >
         <ul className="List_menu">
-          <Link to="/">
-            {" "}
-            <motion.li
-              variants={item}
-              whileHover={{ scale: 1.1 }}
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-              className="Link_menu"
-            >
-              Sobre mi
-            </motion.li>
-          </Link>
-          <Link to="/proyectos">
+          {links.map((link) => (
+            <Link to={`${link.Link}`}>
+              {" "}
+              <motion.li
+                variants={item}
+                whileHover={{ scale: 1.1 }}
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+                className="Link_menu"
+              >
+                {`${link.name}`}
+
+                {/* {hover && (
+                  <section className="text_menu_hover">
+                    <p>{`${link.texto_alt}`}</p>
+                  </section>
+                )} */}
+              </motion.li>
+            </Link>
+          ))}
+
+          {/* <Link to="/proyectos">
             <motion.li
               variants={item}
               whileHover={{ scale: 1.1 }}
@@ -104,7 +120,7 @@ export default function NavMenu(props) {
             className="Link_menu"
           >
             Contacto
-          </motion.li>
+          </motion.li> */}
         </ul>
       </motion.article>
     </>

@@ -25,5 +25,14 @@
     { "name": "Figma", "image": "https://placekitten.com/200/300", "alt": "imagen logo Figma"},
     { "name": "Git", "image": "https://placekitten.com/200/100", "alt": "imagen logo Git"}
   
+  ],
+
+  "links" : [
+    
+    { "name": "Sobre mi", "texto_alt": "Conoceme mejor", "Link": "/"},
+    { "name": "Trabajos", "texto_alt": "Mira mis proyectos", "Link": "/proyectos"},
+    { "name": "Contacto", "texto_alt": "Cuentame que necesitas", "Link": "/contacto"}
+  
+  
   ]
 }
