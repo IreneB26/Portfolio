@@ -56,6 +56,8 @@
   .contain_skillCards {
     width: 100vw;
     margin-left: 0vw;
+    height: 100%;
+    margin-top: 10vh;
   }
 
   .cards {

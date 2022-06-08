@@ -51,15 +51,45 @@
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   /* gap: 15%; */
   margin-left: 50px;
 }
 
-.text_menu_hover {
-  width: 50vw;
-  background-color: red;
+.hover_menu {
+  width: 100vw;
+  position: absolute;
+  background: white;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  visibility: hidden;
+  margin-left: -50px;
+}
+.text_menu_hover_animation {
+  position: absolute;
+  line-height: 40px;
+  left: 0;
+
+  width: 100vw;
+
+  color: #0500ff;
+
+  animation-name: animar;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes animar {
+  100% {
+    left: 100%;
+  }
+}
+
+.Link_menu:hover .hover_menu {
+  visibility: visible;
 }
 
 .Link_menu {
@@ -68,6 +98,7 @@
   font-size: 3.5rem;
   list-style: none;
   font-weight: bold;
+  display: flex;
 }
 
 #navMenu > span {
@@ -132,6 +163,10 @@
     /* gap: 15%; */
     margin-left: 0px;
   }
+
+  .Link_menu:hover .hover_menu {
+    visibility: hidden;
+  }
 }
 
 /* modo oscuro */
@@ -156,4 +191,16 @@
 .black #navMenu.active > span:nth-child(1),
 .black #navMenu.active > span:nth-child(3) {
   background-color: black;
+}
+
+.black .hover_menu {
+  background: #0c0923;
+}
+.black .text_menu_hover_animation {
+  color: #ffb800;
+
+  animation-name: animar;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }

@@ -89,38 +89,12 @@ export default function NavMenu(props) {
                 className="Link_menu"
               >
                 {`${link.name}`}
-
-                {/* {hover && (
-                  <section className="text_menu_hover">
-                    <p>{`${link.texto_alt}`}</p>
-                  </section>
-                )} */}
+                <section className="hover_menu">
+                  <p className="text_menu_hover_animation">{`${link.texto_alt}`}</p>
+                </section>
               </motion.li>
             </Link>
           ))}
-
-          {/* <Link to="/proyectos">
-            <motion.li
-              variants={item}
-              whileHover={{ scale: 1.1 }}
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-              className="Link_menu"
-            >
-              Trabajos
-            </motion.li>
-          </Link>
-          <motion.li
-            variants={item}
-            whileHover={{ scale: 1.1 }}
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-            className="Link_menu"
-          >
-            Contacto
-          </motion.li> */}
         </ul>
       </motion.article>
     </>

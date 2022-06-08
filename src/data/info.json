@@ -29,9 +29,9 @@
 
   "links" : [
     
-    { "name": "Sobre mi", "texto_alt": "Conoceme mejor", "Link": "/"},
-    { "name": "Trabajos", "texto_alt": "Mira mis proyectos", "Link": "/proyectos"},
-    { "name": "Contacto", "texto_alt": "Cuentame que necesitas", "Link": "/contacto"}
+    { "name": "Sobre mi", "texto_alt": "Descubre más sobre mi 👀", "Link": "/"},
+    { "name": "Trabajos", "texto_alt": "Mira mis proyectos 💻​", "Link": "/proyectos"},
+    { "name": "Contacto", "texto_alt": "Cuentame que necesitas 📲​", "Link": "/contacto"}
   
   
   ]
