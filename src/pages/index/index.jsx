@@ -44,17 +44,22 @@ export default function Index() {
 
         <article className="info_principal">
           <Titulo contenido="hi, i`m Irene Bargues" />
-          <Button contenido="Descargar CV">
-            <p className="descripcion">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              distinctio quos voluptas vel! Labore vero nam hic minus
-              perspiciatis eum nesciunt consectetur sapiente rerum dicta.
-              Corporis vitae aperiam impedit pariatur! Aliunt! Similique,
-              praesentium labore! Quasi quisquam corrupti quia facere earum
-              sequi, nesciunt iste temporibus voluptatem eos molestias
-              laboriosam maxime accusamus aperiam, architecto nisi mollitia.
-            </p>
-          </Button>
+
+          <p className="descripcion">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            distinctio quos voluptas vel! Labore vero nam hic minus perspiciatis
+            eum nesciunt consectetur sapiente rerum dicta. Corporis vitae
+            aperiam impedit pariatur! Aliunt! Similique, praesentium labore!
+            Quasi quisquam corrupti quia facere earum sequi, nesciunt iste
+            temporibus voluptatem eos molestias laboriosam maxime accusamus
+            aperiam, architecto nisi mollitia.
+          </p>
+          <a
+            href="https://drive.google.com/uc?id=14gbmfT_XL6mGRGugtDmCa4XFNSjKOOwJ&export=download"
+            download="CV Irene Bargues"
+          >
+            <Button contenido="Descargar CV"></Button>
+          </a>
         </article>
       </motion.section>
 

@@ -5,7 +5,7 @@ export default function Button(props) {
     <>
       {props.children}
 
-      <button>
+      <button href={props.href} download={props.download}>
         <p className="content_button">{props.contenido}</p>
       </button>
     </>
