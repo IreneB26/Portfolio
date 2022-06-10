@@ -1,15 +1,23 @@
 import { Moon } from "grommet-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
 import "./menu.css";
-import Links from "../../data/info.json";
+
+import { useDatabase, useDatabaseObjectData } from "reactfire";
+import { ref } from "firebase/database";
 
 export default function NavMenu(props) {
-  const links = Links.links;
+  const databaseFB = useDatabase();
+  const counterRef = ref(databaseFB, "data");
+  const { status, data } = useDatabaseObjectData(counterRef);
+
+  // const links = Links.links;
+
+  const body = document.querySelector("body");
 
   const [hover, setIsHover] = useState(false);
 
@@ -57,6 +65,12 @@ export default function NavMenu(props) {
           onClick={() => {
             setIsOpen(!isOpen);
             setFirst(false);
+
+            if (isOpen === false) {
+              body.style.overflow = "hidden";
+            } else {
+              body.style.overflow = "visible";
+            }
           }}
           className={isOpen === true ? " active" : ""}
           id="navMenu"
@@ -75,7 +89,7 @@ export default function NavMenu(props) {
         variants={container}
       >
         <ul className="List_menu">
-          {links.map((link) => (
+          {data.links.map((link) => (
             <Link to={`${link.Link}`}>
               {" "}
               <motion.li
@@ -83,6 +97,11 @@ export default function NavMenu(props) {
                 whileHover={{ scale: 1.1 }}
                 onClick={() => {
                   setIsOpen(!isOpen);
+                  if (isOpen === false) {
+                    body.style.overflow = "hidden";
+                  } else {
+                    body.style.overflow = "visible";
+                  }
                 }}
                 onMouseEnter={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}

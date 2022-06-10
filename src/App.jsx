@@ -12,6 +12,10 @@ import { useState } from "react";
 
 import { motion } from "framer-motion";
 
+import { useFirebaseApp } from "reactfire";
+import { DatabaseProvider } from "reactfire";
+import { getDatabase } from "firebase/database";
+
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("");
 
@@ -22,21 +26,22 @@ function App() {
     }
   };
 
+  const firestoreInstance = getDatabase(useFirebaseApp());
+
   return (
-    <div className={`App ${backgroundColor}`}>
-      {/* className="App" */}
+    <DatabaseProvider sdk={firestoreInstance}>
+      <div className={`App ${backgroundColor}`}>
+        {/* className="App" */}
 
-      <NavMenu changeColor={setStyle} />
+        <NavMenu changeColor={setStyle} />
 
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/proyectos" element={<ContainProyectos />} />
-
-        <Route path="/infoProyecto" element={<Proyectos />} />
-      </Routes>
-
-      <ContactAside />
-    </div>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/proyectos" element={<ContainProyectos />} />
+          <Route path="/infoProyecto" element={<Proyectos />} />
+        </Routes>
+      </div>
+    </DatabaseProvider>
   );
 }
 

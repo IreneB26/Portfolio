@@ -9,23 +9,19 @@ import { motion } from "framer-motion";
 import SkillInfo from "../../data/info.json";
 
 import "./index.css";
+import { useDatabase, useDatabaseObjectData } from "reactfire";
+import { ref } from "firebase/database";
 
 export default function Index() {
-  const front = SkillInfo.frontend;
-  const back = SkillInfo.backend;
-  const database = SkillInfo.database;
-  const tools = SkillInfo.tools;
+  // const front = SkillInfo.frontend;
+  // const back = SkillInfo.backend;
+  // const database = SkillInfo.database;
+  // const tools = SkillInfo.tools;
 
-  //   let response = fetch(
-  //     "https://portfolio-89202-default-rtdb.europe-west1.firebasedatabase.app/"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
+  const databaseFB = useDatabase();
+  const counterRef = ref(databaseFB, "data");
+  const { status, data } = useDatabaseObjectData(counterRef);
+  // console.log(data);
 
   return (
     <>
@@ -80,7 +76,7 @@ export default function Index() {
             </section>
 
             <article>
-              {front.map((img) => (
+              {data.frontend.map((img) => (
                 <div className="tooltip">
                   <img
                     loading="lazy"
@@ -101,7 +97,7 @@ export default function Index() {
             </section>
 
             <article>
-              {back.map((img) => (
+              {data.backend.map((img) => (
                 <div className="tooltip">
                   <img
                     loading="lazy"
@@ -122,7 +118,7 @@ export default function Index() {
             </section>
 
             <article>
-              {database.map((img) => (
+              {data.database.map((img) => (
                 <div className="tooltip">
                   <img
                     loading="lazy"
@@ -143,7 +139,7 @@ export default function Index() {
             </section>
 
             <article>
-              {tools.map((img) => (
+              {data.tools.map((img) => (
                 <div className="tooltip">
                   <img
                     loading="lazy"
