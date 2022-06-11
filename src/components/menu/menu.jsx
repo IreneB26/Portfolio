@@ -88,7 +88,7 @@ export default function NavMenu(props) {
                 onMouseLeave={() => setIsHover(false)}
                 className="Link_menu"
               >
-                {`${link.name}`}
+                <p className="link_text"> {`${link.name}`}</p>
                 <section className="hover_menu">
                   <p className="text_menu_hover_animation">{`${link.texto_alt}`}</p>
                 </section>
