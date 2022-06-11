@@ -13,7 +13,13 @@ import { ref } from "firebase/database";
 export default function NavMenu(props) {
   const databaseFB = useDatabase();
   const counterRef = ref(databaseFB, "data");
+
   const { status, data } = useDatabaseObjectData(counterRef);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+  console.log(data);
 
   // const links = Links.links;
 
