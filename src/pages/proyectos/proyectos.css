@@ -72,6 +72,12 @@
   }
 }
 
+@media (max-width: 390px) {
+  .button_proyectos {
+    width: 90vw;
+  }
+}
+
 /* dark mode */
 
 .black .descripcion_proyecto {
