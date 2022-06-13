@@ -40,6 +40,7 @@ export default function NavMenu(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const [first, setFirst] = useState(true);
+  const [black, setBlack] = useState(false);
 
   return (
     <>
@@ -59,9 +60,12 @@ export default function NavMenu(props) {
           <span></span>
         </div>
         <Moon
-          onClick={() => props.changeColor("black")}
+          onClick={() => {
+            props.changeColor("black");
+            setBlack(!black);
+          }}
           className={isOpen === true ? " theme opacity" : "theme"}
-          color="black"
+          color={black === true ? "white" : "black"}
           size="large"
         />
       </nav>

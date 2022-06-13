@@ -3,6 +3,7 @@ import CardSkill from "../index/components/card_skill/card_skill";
 import { Link } from "react-router-dom";
 
 import "./containProyectos.css";
+import { Github, Share, ShareRounded } from "grommet-icons";
 
 export default function ContainProyectos() {
   return (
@@ -17,9 +18,9 @@ export default function ContainProyectos() {
                 <h2>title</h2>
 
                 <article className="link_card">
-                  <p>github</p>
+                  <Github color="black" size="medium" className="icon" />
 
-                  <p>web</p>
+                  <ShareRounded color="black" size="medium" className="icon" />
                 </article>
               </section>
               <p className="descripcion_cards">

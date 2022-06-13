@@ -13,14 +13,14 @@ export default function Contact_aside() {
             target="_blank"
             rel="noreferrer"
           >
-            <Linkedin color="black" size="large" />
+            <Linkedin color="black" size="large" className="icon" />
           </a>
           <a
             href="https://github.com/IreneB26"
             target="_blank"
             rel="noreferrer"
           >
-            <Github color="black" size="large" />
+            <Github color="black" size="large" className="icon" />
           </a>
         </article>
 

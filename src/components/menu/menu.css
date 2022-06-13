@@ -208,3 +208,7 @@
 .black .text_menu_hover_animation {
   color: black;
 }
+
+.black .icon {
+  fill: white !important;
+}
