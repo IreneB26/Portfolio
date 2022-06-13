@@ -69,6 +69,11 @@
   right: 0;
   text-align: center;
   /* position: relative; */
+  /* size: 5px; */
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .text_menu_hover_animation {
   /* line-height: 40px; */
