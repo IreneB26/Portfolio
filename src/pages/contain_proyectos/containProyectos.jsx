@@ -5,35 +5,42 @@ import { Link } from "react-router-dom";
 import "./containProyectos.css";
 import { Github, Share, ShareRounded } from "grommet-icons";
 
+import info from "../../data/info.json";
+
 export default function ContainProyectos() {
+  const data = info.Projects;
+
   return (
     <>
       <section className="contain_skillCards">
         <h1 className="title_proyectos">Proyectos</h1>
 
         <article className="cards">
-          <Link to="/infoProyecto">
+          {data.map((project) => (
             <CardSkill clas="hover">
+              <Link className="contain_A" to="/infoProyecto"></Link>
               <section className="head_card">
-                <h2>title</h2>
+                <h2>{project.name}</h2>
 
                 <article className="link_card">
-                  <Github color="black" size="medium" className="icon" />
+                  <a href={project.github}>
+                    <Github color="black" size="medium" className="icon" />
+                  </a>
 
-                  <ShareRounded color="black" size="medium" className="icon" />
+                  <a href={project.Link}>
+                    <ShareRounded
+                      color="black"
+                      size="medium"
+                      className="icon"
+                    />
+                  </a>
                 </article>
               </section>
-              <p className="descripcion_cards">
-                Lorem ipsum, dolor sit amevero sequi beatae quas consequatur!
-                Natus, odio vel architecto omnis excepturi accusamus ducimus
-                distinctio numquam, amet sapiente doloremque nulla esse
-                explicabo. Laudantium similique nostrum inventore veritatis!
-                Odit qu
-              </p>
+              <p className="descripcion_cards">{project.description}</p>
             </CardSkill>
-          </Link>
+          ))}
 
-          <Link to="/infoProyecto">
+          {/* <Link to="/infoProyecto">
             <CardSkill>
               <section className="head_card">
                 <h2>title</h2>
@@ -94,7 +101,7 @@ export default function ContainProyectos() {
                 Odit qu
               </p>
             </CardSkill>
-          </Link>
+          </Link> */}
         </article>
       </section>
     </>
