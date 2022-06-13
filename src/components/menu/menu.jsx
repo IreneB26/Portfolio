@@ -64,7 +64,7 @@ export default function NavMenu(props) {
             props.changeColor("black");
             setBlack(!black);
           }}
-          className={isOpen === true ? " theme opacity" : "theme"}
+          className={isOpen === true ? " theme opacity icon" : "theme icon"}
           color={black === true ? "white" : "black"}
           size="large"
         />

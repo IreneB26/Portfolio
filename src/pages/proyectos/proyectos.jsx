@@ -1,19 +1,23 @@
+import { useParams } from "react-router-dom";
 import Button from "../../components/button/button";
 import Titulo from "../../components/titulos/titulo";
 import "./proyectos.css";
+import data from "../../data/info.json";
+
+// import img from "./logos/";
 
 export default function Proyectos() {
+  const parameter = useParams();
+  const infoProject = data.Projects.find(
+    (element) => element.id === parameter.id
+  );
+
   return (
     <>
       <section className="Proyectos_title">
-        <Titulo contenido="Proyectos"></Titulo>
+        <Titulo contenido={infoProject.name}></Titulo>
 
-        <p className="descripcion_proyecto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          eligendi delectus ducimus ratione voluptatum dicta incidunt atque
-          dolore ullam voluptatem neque asperiores eos expedita, quaerat
-          reiciendis quae voluptas enim deleniti.
-        </p>
+        <p className="descripcion_proyecto">{infoProject.description}</p>
 
         <img src="" className="img_proyecto"></img>
 
@@ -23,15 +27,25 @@ export default function Proyectos() {
           </article>
 
           <article className="img_skill_container">
-            <img src="" className="img_skill_proyecto"></img>
-            <img src="" className="img_skill_proyecto"></img>
-            <img src="" className="img_skill_proyecto"></img>
+            {/* {infoProject.tools.HTML} */}
+
+            {infoProject.tools.map((element) => (
+              <img
+                src={process.env.PUBLIC_URL + `/logos/${element.img}`}
+                className="img_skill_proyecto"
+                alt={element.name}
+              ></img>
+            ))}
           </article>
         </section>
 
         <article className="button_proyectos">
-          <Button contenido="Ver código" />
-          <Button contenido="Ver en la web" />
+          <a target="_blank" href={infoProject.github} rel="noreferrer">
+            <Button contenido="Ver código" />
+          </a>
+          <a target="_blank" href={infoProject.Link} rel="noreferrer">
+            <Button contenido="Ver en la web" />
+          </a>
         </article>
       </section>
     </>

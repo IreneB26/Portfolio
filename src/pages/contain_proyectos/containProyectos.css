@@ -55,15 +55,30 @@
 }
 
 .descripcion_cards {
-  padding: 7px;
-  color: black;
-  /* -webkit-line-clamp: initial; */
+  height: calc(3 * 21px);
   overflow: hidden;
+
+  padding: 0px 15px;
+  color: black;
+  /* overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  margin-top: 5px;
+  margin-top: 5px; */
+  position: absolute;
+  bottom: 20px;
+}
+
+.descripcion_cards::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 21px;
+  width: 75%;
+  background: linear-gradient(90deg, transparent, white);
 }
 
 .link_card {

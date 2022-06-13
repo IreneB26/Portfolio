@@ -35,7 +35,7 @@
 .img_skill_proyecto {
   width: 60px;
   height: 60px;
-  border: 1px solid red;
+
   margin-right: 30px;
 }
 
@@ -75,6 +75,21 @@
 @media (max-width: 390px) {
   .button_proyectos {
     width: 90vw;
+  }
+}
+@media (max-width: 490px) {
+  .img_skill_container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+  }
+
+  .img_skill_proyecto {
+    margin-right: 0px;
+    margin: 15px;
   }
 }
 

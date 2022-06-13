@@ -32,7 +32,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/proyectos" element={<ContainProyectos />} />
 
-        <Route path="/infoProyecto" element={<Proyectos />} />
+        <Route path="/infoProyecto/:id" element={<Proyectos />} />
       </Routes>
 
       <ContactAside />
