@@ -46,13 +46,6 @@ export default function NavMenu(props) {
       <nav
         className={isOpen === true ? " nav_menu position_nav_menu" : "nav_menu"}
       >
-        <Moon
-          onClick={() => props.changeColor("black")}
-          className={isOpen === true ? " theme opacity" : "theme"}
-          color="black"
-          size="large"
-        />
-
         <div
           onClick={() => {
             setIsOpen(!isOpen);
@@ -65,6 +58,12 @@ export default function NavMenu(props) {
           <span></span>
           <span></span>
         </div>
+        <Moon
+          onClick={() => props.changeColor("black")}
+          className={isOpen === true ? " theme opacity" : "theme"}
+          color="black"
+          size="large"
+        />
       </nav>
 
       {/* content_menu */}
