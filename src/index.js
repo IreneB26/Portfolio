@@ -26,7 +26,7 @@ root.render(
     <BrowserRouter>
         <FirebaseAppProvider firebaseConfig={firebaseConfig}>
         <App />
-      </FirebaseAppProvider>,
+      </FirebaseAppProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
