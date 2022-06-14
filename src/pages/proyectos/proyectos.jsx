@@ -13,7 +13,6 @@ export default function Proyectos() {
   const databaseFB = useDatabase();
   const counterRef = ref(databaseFB, "data");
   const { status, data } = useDatabaseObjectData(counterRef);
-  console.log(data);
 
   const parameter = useParams();
 

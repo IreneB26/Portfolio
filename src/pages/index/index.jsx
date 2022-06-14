@@ -81,7 +81,7 @@ export default function Index() {
                     <img
                       loading="lazy"
                       className="img_skill"
-                      src={`${img.image}`}
+                      src={process.env.PUBLIC_URL + `/logos/${img.image}`}
                       alt={`${img.alt}`}
                     ></img>
 
@@ -104,7 +104,7 @@ export default function Index() {
                     <img
                       loading="lazy"
                       className="img_skill"
-                      src={`${img.image}`}
+                      src={process.env.PUBLIC_URL + `/logos/${img.image}`}
                       alt={`${img.alt}`}
                     ></img>
 
@@ -126,7 +126,7 @@ export default function Index() {
                     <img
                       loading="lazy"
                       className="img_skill"
-                      src={`${img.image}`}
+                      src={process.env.PUBLIC_URL + `/logos/${img.image}`}
                       alt={`${img.alt}`}
                     ></img>
 
@@ -148,7 +148,7 @@ export default function Index() {
                     <img
                       loading="lazy"
                       className="img_skill"
-                      src={`${img.image}`}
+                      src={process.env.PUBLIC_URL + `/logos/${img.image}`}
                       alt={`${img.alt}`}
                     ></img>
 
