@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { useFirebaseApp } from "reactfire";
 import { DatabaseProvider } from "reactfire";
 import { getDatabase } from "firebase/database";
+import Contact from "./pages/contact/contact";
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("");
@@ -38,6 +39,7 @@ function App() {
           <Route path="/proyectos" element={<ContainProyectos />} />
 
           <Route path="/infoProyecto/:id" element={<Proyectos />} />
+          <Route path="/contacto" element={<Contact />} />
         </Routes>
 
         <ContactAside />

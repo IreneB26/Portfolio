@@ -45,11 +45,11 @@
 }
 
 .img_proyecto {
-  margin-top: 50px;
-  border: 1px solid red;
-
-  width: 60vw;
-  height: 30vh;
+  /* margin-top: 50px;  */
+  /* border: 1px solid red; */
+  width: 100vw;
+  height: 75vh;
+  object-fit: contain;
 }
 
 .skill_proyecto {

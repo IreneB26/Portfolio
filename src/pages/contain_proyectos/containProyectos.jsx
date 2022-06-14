@@ -7,6 +7,8 @@ import { Github, Share, ShareRounded } from "grommet-icons";
 
 import info from "../../data/info.json";
 
+import { motion } from "framer-motion";
+
 import { useDatabase, useDatabaseObjectData } from "reactfire";
 import { ref } from "firebase/database";
 
@@ -20,9 +22,21 @@ export default function ContainProyectos() {
   return (
     <>
       <section className="contain_skillCards">
-        <h1 className="title_proyectos">Proyectos</h1>
+        <motion.h1
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+          whileInView={{ opacity: 1 }}
+          className="title_proyectos"
+        >
+          Proyectos
+        </motion.h1>
         {data !== undefined && (
-          <article className="cards">
+          <motion.article
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1 }}
+            className="cards"
+          >
             {data.Projects.map((project) => (
               <CardSkill clas="hover">
                 <Link
@@ -33,11 +47,11 @@ export default function ContainProyectos() {
                   <h2>{project.name}</h2>
 
                   <article className="link_card">
-                    <a href={project.github}>
+                    <a target="_blank" rel="noreferrer" href={project.github}>
                       <Github color="black" size="medium" className="icon" />
                     </a>
 
-                    <a href={project.Link}>
+                    <a target="_blank" rel="noreferrer" href={project.Link}>
                       <ShareRounded
                         color="black"
                         size="medium"
@@ -49,7 +63,7 @@ export default function ContainProyectos() {
                 <p className="descripcion_cards">{project.description}</p>
               </CardSkill>
             ))}
-          </article>
+          </motion.article>
         )}
       </section>
     </>
