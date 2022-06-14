@@ -41,11 +41,14 @@ export default function Proyectos() {
               {/* {infoProject.tools.HTML} */}
 
               {infoProject.tools.map((element) => (
-                <img
-                  src={process.env.PUBLIC_URL + `/logos/${element.img}`}
-                  className="img_skill_proyecto"
-                  alt={element.name}
-                ></img>
+                <div className="tooltip tooltip_proyect">
+                  <img
+                    src={process.env.PUBLIC_URL + `/logos/${element.img}`}
+                    className="img_skill_proyecto"
+                    alt={element.alt}
+                  ></img>
+                  <span className="tooltiptext">{element.name}</span>
+                </div>
               ))}
             </article>
           </section>
