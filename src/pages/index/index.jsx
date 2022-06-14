@@ -10,22 +10,18 @@ import SkillInfo from "../../data/info.json";
 
 import "./index.css";
 
-export default function Index() {
-  const front = SkillInfo.frontend;
-  const back = SkillInfo.backend;
-  const database = SkillInfo.database;
-  const tools = SkillInfo.tools;
+import { useDatabase, useDatabaseObjectData } from "reactfire";
+import { ref } from "firebase/database";
 
-  //   let response = fetch(
-  //     "https://portfolio-89202-default-rtdb.europe-west1.firebasedatabase.app/"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
+export default function Index() {
+  const databaseFB = useDatabase();
+  const counterRef = ref(databaseFB, "data");
+  const { status, data } = useDatabaseObjectData(counterRef);
+
+  // const front = SkillInfo.frontend;
+  // const back = SkillInfo.backend;
+  // const database = SkillInfo.database;
+  // const tools = SkillInfo.tools;
 
   return (
     <>
@@ -78,21 +74,22 @@ export default function Index() {
             <section>
               <p className="title_card">Front-end</p>
             </section>
+            {data !== undefined && (
+              <article>
+                {data.frontend.map((img) => (
+                  <div className="tooltip">
+                    <img
+                      loading="lazy"
+                      className="img_skill"
+                      src={`${img.image}`}
+                      alt={`${img.alt}`}
+                    ></img>
 
-            <article>
-              {front.map((img) => (
-                <div className="tooltip">
-                  <img
-                    loading="lazy"
-                    className="img_skill"
-                    src={`${img.image}`}
-                    alt={`${img.alt}`}
-                  ></img>
-
-                  <span className="tooltiptext">{img.name}</span>
-                </div>
-              ))}
-            </article>
+                    <span className="tooltiptext">{img.name}</span>
+                  </div>
+                ))}
+              </article>
+            )}
           </CardSkill>
 
           <CardSkill>
@@ -100,62 +97,66 @@ export default function Index() {
               <p className="title_card">Backend</p>
             </section>
 
-            <article>
-              {back.map((img) => (
-                <div className="tooltip">
-                  <img
-                    loading="lazy"
-                    className="img_skill"
-                    src={`${img.image}`}
-                    alt={`${img.alt}`}
-                  ></img>
+            {data !== undefined && (
+              <article>
+                {data.backend.map((img) => (
+                  <div className="tooltip">
+                    <img
+                      loading="lazy"
+                      className="img_skill"
+                      src={`${img.image}`}
+                      alt={`${img.alt}`}
+                    ></img>
 
-                  <span className="tooltiptext">{img.name}</span>
-                </div>
-              ))}
-            </article>
+                    <span className="tooltiptext">{img.name}</span>
+                  </div>
+                ))}
+              </article>
+            )}
           </CardSkill>
 
           <CardSkill>
             <section>
               <p className="title_card">Database</p>
             </section>
+            {data !== undefined && (
+              <article>
+                {data.database.map((img) => (
+                  <div className="tooltip">
+                    <img
+                      loading="lazy"
+                      className="img_skill"
+                      src={`${img.image}`}
+                      alt={`${img.alt}`}
+                    ></img>
 
-            <article>
-              {database.map((img) => (
-                <div className="tooltip">
-                  <img
-                    loading="lazy"
-                    className="img_skill"
-                    src={`${img.image}`}
-                    alt={`${img.alt}`}
-                  ></img>
-
-                  <span className="tooltiptext">{img.name}</span>
-                </div>
-              ))}
-            </article>
+                    <span className="tooltiptext">{img.name}</span>
+                  </div>
+                ))}
+              </article>
+            )}
           </CardSkill>
 
           <CardSkill>
             <section>
               <p className="title_card">Tools</p>
             </section>
+            {data !== undefined && (
+              <article>
+                {data.tools.map((img) => (
+                  <div className="tooltip">
+                    <img
+                      loading="lazy"
+                      className="img_skill"
+                      src={`${img.image}`}
+                      alt={`${img.alt}`}
+                    ></img>
 
-            <article>
-              {tools.map((img) => (
-                <div className="tooltip">
-                  <img
-                    loading="lazy"
-                    className="img_skill"
-                    src={`${img.image}`}
-                    alt={`${img.alt}`}
-                  ></img>
-
-                  <span className="tooltiptext">{img.name}</span>
-                </div>
-              ))}
-            </article>
+                    <span className="tooltiptext">{img.name}</span>
+                  </div>
+                ))}
+              </article>
+            )}
           </CardSkill>
         </article>
       </motion.section>

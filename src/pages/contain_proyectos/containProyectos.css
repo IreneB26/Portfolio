@@ -60,17 +60,18 @@
 
   padding: 0px 15px;
   color: black;
-  /* overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  margin-top: 5px; */
-  position: absolute;
-  bottom: 20px;
+  margin-top: 5px;
+
+  /* position: absolute;
+  bottom: 20px; */
 }
 
-.descripcion_cards::after {
+/* .descripcion_cards::after {
   content: "";
 
   position: absolute;
@@ -79,7 +80,7 @@
   height: 21px;
   width: 75%;
   background: linear-gradient(90deg, transparent, white);
-}
+} */
 
 .link_card {
   width: 30%;

@@ -7,42 +7,50 @@ import { Github, Share, ShareRounded } from "grommet-icons";
 
 import info from "../../data/info.json";
 
+import { useDatabase, useDatabaseObjectData } from "reactfire";
+import { ref } from "firebase/database";
+
 export default function ContainProyectos() {
-  const data = info.Projects;
+  // const data = info.Projects;
+
+  const databaseFB = useDatabase();
+  const counterRef = ref(databaseFB, "data");
+  const { status, data } = useDatabaseObjectData(counterRef);
 
   return (
     <>
       <section className="contain_skillCards">
         <h1 className="title_proyectos">Proyectos</h1>
+        {data !== undefined && (
+          <article className="cards">
+            {data.Projects.map((project) => (
+              <CardSkill clas="hover">
+                <Link
+                  className="contain_A"
+                  to={`/infoProyecto/${project.id}`}
+                ></Link>
+                <section className="head_card">
+                  <h2>{project.name}</h2>
 
-        <article className="cards">
-          {data.map((project) => (
-            <CardSkill clas="hover">
-              <Link
-                className="contain_A"
-                to={`/infoProyecto/${project.id}`}
-              ></Link>
-              <section className="head_card">
-                <h2>{project.name}</h2>
+                  <article className="link_card">
+                    <a href={project.github}>
+                      <Github color="black" size="medium" className="icon" />
+                    </a>
 
-                <article className="link_card">
-                  <a href={project.github}>
-                    <Github color="black" size="medium" className="icon" />
-                  </a>
-
-                  <a href={project.Link}>
-                    <ShareRounded
-                      color="black"
-                      size="medium"
-                      className="icon"
-                    />
-                  </a>
-                </article>
-              </section>
-              <p className="descripcion_cards">{project.description}</p>
-            </CardSkill>
-          ))}
-        </article>
+                    <a href={project.Link}>
+                      <ShareRounded
+                        color="black"
+                        size="medium"
+                        className="icon"
+                      />
+                    </a>
+                  </article>
+                </section>
+                <p className="descripcion_cards">{project.description}</p>
+              </CardSkill>
+            ))}
+          </article>
+        )}
       </section>
     </>
   );
