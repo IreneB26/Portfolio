@@ -12,6 +12,7 @@ import "./index.css";
 
 import { useDatabase, useDatabaseObjectData } from "reactfire";
 import { ref } from "firebase/database";
+import Scroll from "./components/scroll/scroll";
 
 export default function Index() {
   const databaseFB = useDatabase();
@@ -173,6 +174,8 @@ export default function Index() {
       >
         <Formacion></Formacion>
       </motion.section>
+
+      <Scroll></Scroll>
     </>
   );
 }

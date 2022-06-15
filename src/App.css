@@ -35,6 +35,9 @@ a,
 button {
   font-family: "Darker Grotesque", sans-serif;
 }
+p {
+  font-size: 22px;
+}
 
 a {
   text-decoration: none;

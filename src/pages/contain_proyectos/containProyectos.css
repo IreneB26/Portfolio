@@ -57,6 +57,7 @@
 .descripcion_cards {
   height: calc(3 * 21px);
   overflow: hidden;
+  font-size: 16px;
 
   padding: 0px 15px;
   color: black;

@@ -273,3 +273,10 @@
 .black .contact_form {
   width: 40vw;
 }
+
+.black .contact_form {
+  margin: 0px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

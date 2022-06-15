@@ -127,3 +127,13 @@
 .black .descripcion_proyecto {
   color: white;
 }
+
+@media (max-width: 425px) {
+  .img_proyecto {
+    /* margin-top: 50px; */
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 40vh;
+    object-fit: contain;
+  }
+}

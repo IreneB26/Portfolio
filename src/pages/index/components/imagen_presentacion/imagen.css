@@ -48,10 +48,17 @@
 
 @media (max-width: 768px) {
   .contain_img_presentacion {
-    max-width: 75%;
-    min-width: 25%;
+    max-width: 100%;
+    min-width: 50%;
 
     margin-right: 0;
+  }
+
+  .section_info h1 {
+    font-size: 2rem;
+  }
+  .descripcion {
+    font-size: 19px;
   }
 }
 
