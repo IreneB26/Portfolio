@@ -23,7 +23,7 @@ const firebaseConfig = {
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename='/' >
+    <BrowserRouter basename='' >
         <FirebaseAppProvider firebaseConfig={firebaseConfig}>
         <App />
       </FirebaseAppProvider>

@@ -6,10 +6,17 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import "./menu.css";
-import Links from "../../data/info.json";
+
+import { useDatabase, useDatabaseObjectData } from "reactfire";
+import { ref } from "firebase/database";
+// import Links from "../../data/info.json";
 
 export default function NavMenu(props) {
-  const links = Links.links;
+  const databaseFB = useDatabase();
+  const counterRef = ref(databaseFB, "data");
+  const { status, data } = useDatabaseObjectData(counterRef);
+
+  // const links = Links.links;
 
   const [hover, setIsHover] = useState(false);
 
@@ -77,28 +84,30 @@ export default function NavMenu(props) {
         animate={isOpen ? "open" : "closed"}
         variants={container}
       >
-        <ul className="List_menu">
-          {links.map((link) => (
-            <Link to={`${link.Link}`}>
-              {" "}
-              <motion.li
-                variants={item}
-                whileHover={{ scale: 1.1 }}
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                }}
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
-                className="Link_menu"
-              >
-                <p className="link_text"> {`${link.name}`}</p>
-                <section className="hover_menu">
-                  <p className="text_menu_hover_animation">{`${link.texto_alt}`}</p>
-                </section>
-              </motion.li>
-            </Link>
-          ))}
-        </ul>
+        {data !== undefined && (
+          <ul className="List_menu">
+            {data.links.map((link) => (
+              <Link to={`${link.Link}`}>
+                {" "}
+                <motion.li
+                  variants={item}
+                  whileHover={{ scale: 1.1 }}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                  onMouseEnter={() => setIsHover(true)}
+                  onMouseLeave={() => setIsHover(false)}
+                  className="Link_menu"
+                >
+                  <p className="link_text"> {`${link.name}`}</p>
+                  <section className="hover_menu">
+                    <p className="text_menu_hover_animation">{`${link.texto_alt}`}</p>
+                  </section>
+                </motion.li>
+              </Link>
+            ))}
+          </ul>
+        )}
       </motion.article>
     </>
   );

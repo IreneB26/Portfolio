@@ -35,7 +35,7 @@ function App() {
         <NavMenu changeColor={setStyle} />
 
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/index" element={<Index />} />
           <Route path="/proyectos" element={<ContainProyectos />} />
 
           <Route path="/infoProyecto/:id" element={<Proyectos />} />
