@@ -1,16 +1,17 @@
 import { Moon } from "grommet-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
 import "./menu.css";
-import Links from "../../data/info.json";
+// import Links from "../../data/info.json";
+
+import { useDatabase, useDatabaseObjectData } from "reactfire";
+import { ref } from "firebase/database";
 
 export default function NavMenu(props) {
-  const links = Links.links;
-
   const [hover, setIsHover] = useState(false);
 
   const container = {
@@ -42,6 +43,26 @@ export default function NavMenu(props) {
   const [first, setFirst] = useState(true);
   const [black, setBlack] = useState(false);
 
+  const databaseFB = useDatabase();
+  const counterRef = ref(databaseFB, "data");
+  const { status, data } = useDatabaseObjectData(counterRef);
+
+  // data[lenguaje]
+
+  const initialLanguaje = "esp";
+  const [lenguaje, setLenguaje] = useState(initialLanguaje);
+  const [text, setText] = useState();
+
+  useEffect(() => {
+    if (data !== undefined) {
+      setText(data[lenguaje]);
+    }
+  }, [data, lenguaje]);
+
+  console.log(text);
+
+  const handleLanguage = (e) => {};
+
   return (
     <>
       <nav
@@ -59,6 +80,11 @@ export default function NavMenu(props) {
           <span></span>
           <span></span>
         </div>
+        <select onChange={handleLanguage()}>
+          <option value="Esp">esp</option>
+          <option value="Eng">eng</option>
+        </select>
+
         <Moon
           onClick={() => {
             props.changeColor("black");
@@ -78,7 +104,7 @@ export default function NavMenu(props) {
         variants={container}
       >
         <ul className="List_menu">
-          {links.map((link) => (
+          {data.esp.links.map((link) => (
             <Link to={`${link.Link}`}>
               {" "}
               <motion.li

@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { useFirebaseApp } from "reactfire";
 import { DatabaseProvider } from "reactfire";
 import { getDatabase } from "firebase/database";
+
 import Contact from "./pages/contact/contact";
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
     }
   };
   const firestoreInstance = getDatabase(useFirebaseApp());
+
+  const database = getDatabase();
   return (
     <DatabaseProvider sdk={firestoreInstance}>
       <div className={`App ${backgroundColor}`}>

@@ -116,7 +116,7 @@
   align-items: flex-start;
   justify-content: center;
   align-self: flex-start;
-  margin-left: 15vw;
+  margin-left: 13vw;
 }
 
 .contain_skills {
@@ -160,6 +160,15 @@
   justify-content: center;
   flex-direction: column;
   margin-left: 10vh;
+}
+
+.titulo_Formacion {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  margin-left: 20vw;
+  margin-top: 100px;
 }
 
 .img_skill {

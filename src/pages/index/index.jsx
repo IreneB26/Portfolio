@@ -76,7 +76,7 @@ export default function Index() {
             </section>
             {data !== undefined && (
               <article>
-                {data.frontend.map((img) => (
+                {data.esp.frontend.map((img) => (
                   <div className="tooltip">
                     <img
                       loading="lazy"
@@ -99,7 +99,7 @@ export default function Index() {
 
             {data !== undefined && (
               <article>
-                {data.backend.map((img) => (
+                {data.esp.backend.map((img) => (
                   <div className="tooltip">
                     <img
                       loading="lazy"
@@ -121,7 +121,7 @@ export default function Index() {
             </section>
             {data !== undefined && (
               <article>
-                {data.database.map((img) => (
+                {data.esp.database.map((img) => (
                   <div className="tooltip">
                     <img
                       loading="lazy"
@@ -143,7 +143,7 @@ export default function Index() {
             </section>
             {data !== undefined && (
               <article>
-                {data.tools.map((img) => (
+                {data.esp.tools.map((img) => (
                   <div className="tooltip">
                     <img
                       loading="lazy"
@@ -161,6 +161,14 @@ export default function Index() {
         </article>
       </motion.section>
 
+      <motion.article
+        initial={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+        whileInView={{ opacity: 1 }}
+        className="titulo_Formacion"
+      >
+        <Titulo contenido="Formación" />
+      </motion.article>
       <motion.section
         className="formacion"
         initial={{ opacity: 0 }}

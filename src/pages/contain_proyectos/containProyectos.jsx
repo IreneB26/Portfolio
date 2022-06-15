@@ -37,32 +37,45 @@ export default function ContainProyectos() {
             whileInView={{ opacity: 1 }}
             className="cards"
           >
-            {data.Projects.map((project) => (
-              <CardSkill clas="hover">
-                <Link
-                  className="contain_A"
-                  to={`/infoProyecto/${project.id}`}
-                ></Link>
-                <section className="head_card">
-                  <h2>{project.name}</h2>
+            {data.esp.Projects.map(
+              (project) => (
+                console.log(project),
+                (
+                  <CardSkill clas="hover">
+                    <Link
+                      className="contain_A"
+                      to={`/infoProyecto/${project.id}`}
+                    ></Link>
+                    <section className="head_card">
+                      <h2>{project.name}</h2>
 
-                  <article className="link_card">
-                    <a target="_blank" rel="noreferrer" href={project.github}>
-                      <Github color="black" size="medium" className="icon" />
-                    </a>
+                      <article className="link_card">
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href={project.github}
+                        >
+                          <Github
+                            color="black"
+                            size="medium"
+                            className="icon"
+                          />
+                        </a>
 
-                    <a target="_blank" rel="noreferrer" href={project.Link}>
-                      <ShareRounded
-                        color="black"
-                        size="medium"
-                        className="icon"
-                      />
-                    </a>
-                  </article>
-                </section>
-                <p className="descripcion_cards">{project.description}</p>
-              </CardSkill>
-            ))}
+                        <a target="_blank" rel="noreferrer" href={project.Link}>
+                          <ShareRounded
+                            color="black"
+                            size="medium"
+                            className="icon"
+                          />
+                        </a>
+                      </article>
+                    </section>
+                    <p className="descripcion_cards">{project.description}</p>
+                  </CardSkill>
+                )
+              )
+            )}
           </motion.article>
         )}
       </section>

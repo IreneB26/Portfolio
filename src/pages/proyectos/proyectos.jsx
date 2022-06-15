@@ -19,7 +19,7 @@ export default function Proyectos() {
   const parameter = useParams();
 
   if (data !== undefined) {
-    var infoProject = data.Projects.find(
+    var infoProject = data.esp.Projects.find(
       (element) => element.id === parameter.id
     );
   }
