@@ -39,16 +39,11 @@ export default function Index() {
         </article>
 
         <article className="info_principal">
-          <Titulo contenido="hi, i`m Irene Bargues" />
+          <Titulo contenido="Hola, soy Irene Bargues" />
 
           <p className="descripcion">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-            distinctio quos voluptas vel! Labore vero nam hic minus perspiciatis
-            eum nesciunt consectetur sapiente rerum dicta. Corporis vitae
-            aperiam impedit pariatur! Aliunt! Similique, praesentium labore!
-            Quasi quisquam corrupti quia facere earum sequi, nesciunt iste
-            temporibus voluptatem eos molestias laboriosam maxime accusamus
-            aperiam, architecto nisi mollitia.
+            Soy font-end developer, y deseñadora UX/UI. Hago páginas web
+            accesibles e innovadoras, y me encanta seguir aprendiendo.
           </p>
           <a
             href="https://drive.google.com/uc?id=14gbmfT_XL6mGRGugtDmCa4XFNSjKOOwJ&export=download"

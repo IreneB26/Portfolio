@@ -245,7 +245,7 @@
   font-family: "Syncopate", sans-serif;
 }
 
-.close_contact::before {
+.black .close_contact::before {
   content: "<";
   background: linear-gradient(
     to right bottom,

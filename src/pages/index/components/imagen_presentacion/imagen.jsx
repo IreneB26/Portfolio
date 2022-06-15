@@ -2,6 +2,7 @@ import "./imagen.css";
 import { motion } from "framer-motion";
 
 import img from "./img/me.jpg";
+import test from "./img/test.JPG";
 
 export default function Imagen(props) {
   return (

@@ -116,7 +116,7 @@
   align-items: flex-start;
   justify-content: center;
   align-self: flex-start;
-  margin-left: 15vw;
+  margin-left: 13vw;
 }
 
 .contain_skills {
@@ -167,6 +167,15 @@
   height: 60px;
   object-fit: cover;
   margin: 10px 5px;
+}
+
+.titulo_Formacion {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  margin-left: 20vw;
+  margin-top: 100px;
 }
 
 @media (max-width: 1024px) {
