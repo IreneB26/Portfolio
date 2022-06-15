@@ -156,6 +156,15 @@ export default function Index() {
         </article>
       </motion.section>
 
+      <motion.article
+        initial={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+        whileInView={{ opacity: 1 }}
+        className="titulo_Formacion"
+      >
+        <Titulo contenido="Formación" />
+      </motion.article>
+
       <motion.section
         className="formacion"
         initial={{ opacity: 0 }}
