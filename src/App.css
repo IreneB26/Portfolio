@@ -1,62 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Syncopate&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Syncopate&display=swap");
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.App{
+.App {
   display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.aside{
+.aside {
   width: 10vw;
   height: 100vh;
+  position: fixed;
+  left: 0;
 }
 
-.contain{
+.contain {
   width: 80vw;
   height: 100vh;
+  margin-left: 10vh;
 }
 
-.menu{
+.menu {
   width: 10vw;
   height: 100vh;
 }
 
-
-p,a,button{
-  font-family: 'Darker Grotesque', sans-serif;
+p,
+a,
+button {
+  font-family: "Darker Grotesque", sans-serif;
+}
+p {
+  font-size: 22px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-
 @media (max-width: 768px) {
-  .App{
-    flex-direction: column-reverse;
+  .App {
+    flex-direction: column;
   }
 
-  .aside{
-    width: 100vw;
-    height: 10vh;
-  }
-
-  .contain{
-    width: 100vw;
-    height: 80vh;
-  }
-
-  .menu{
-    width: 100vw;
-    height: 10vh;
+  h1 {
+    font-size: 2rem;
   }
 }
 
-
-
-
+.black {
+  background-color: #0c0923;
+  transition: background 500ms;
+}
+.white {
+  background-color: #fff;
+  transition: background 500ms;
+}

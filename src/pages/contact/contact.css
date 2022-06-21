@@ -1,0 +1,282 @@
+.contain_contact {
+  width: 90vw;
+  margin-left: 10vw;
+  height: 100vh;
+  padding: 30px;
+  /* margin-top: 10vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px transparent;
+  border-radius: 5px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(150deg, #0500ff, #bd00ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  display: block;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 25px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #0500ff;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  margin-bottom: 15px;
+}
+.contain_form {
+  margin: 20px;
+}
+
+.contact_form {
+  margin: 100px;
+  width: 40vw;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* height: 30vh; */
+}
+
+.button_form {
+  width: 30%;
+}
+
+.contain_button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_contact {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.open_contact {
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.open_contact::before {
+  content: "<";
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+.open_contact::after {
+  content: ">";
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.close_contact {
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.close_contact::before {
+  content: "<";
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+.close_contact::after {
+  content: ">";
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.contac_text {
+  margin-top: 20px;
+  color: black;
+}
+
+.sub_contact_text {
+  color: black;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact_form {
+    margin: 0px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .contain_contact {
+    width: 100vw;
+    margin-left: 0vw;
+  }
+}
+
+.black .input {
+  border: none;
+  border-bottom: solid 1px transparent;
+  background-image: linear-gradient(#0c0923, #0c0923),
+    linear-gradient(150deg, #ff0000, #ffb800);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.black .label {
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.black .contac_text {
+  color: white;
+}
+
+.black .sub_contact_text {
+  color: white;
+}
+
+.black .open_contact {
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.black .open_contact::before {
+  content: "<";
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+.black .open_contact::after {
+  content: ">";
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.black .close_contact {
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.black .close_contact::before {
+  content: "<";
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+.black .close_contact::after {
+  content: ">";
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.black .contact_form {
+  width: 40vw;
+}
+
+.black .contact_form {
+  margin: 0px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

@@ -1,13 +1,58 @@
-h1,h2,h3,h4,h5,h6{
-
-    background: linear-gradient(to right bottom, #0500ff 0%, #bd00ff 50% ,#bd00ff 100%);
-    background-clip: text;
-    color: transparent; 
-    font-family: 'Syncopate', sans-serif;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: linear-gradient(
+    to right bottom,
+    #0500ff 0%,
+    #bd00ff 50%,
+    #bd00ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
 }
 
-h1{
-    font-size: 3rem;
+h1 {
+  font-size: 3rem;
 }
 
+/* modo oscuro */
+
+.black h1 {
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.black h2 {
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}
+
+.black h3 {
+  background: linear-gradient(
+    to right bottom,
+    #ff0000 0%,
+    #ffb800 50%,
+    #ffb800 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Syncopate", sans-serif;
+}

@@ -1,0 +1,75 @@
+#scroll-container {
+  /* border: 3px solid black; */
+  position: relative;
+  /* border-radius: 5px; */
+  overflow: hidden;
+  width: 100vw;
+  /* margin-left: 10vw; */
+  background: linear-gradient(150deg, #0500ff, #bd00ff);
+  /* z-index: 2; */
+  margin-top: 30px;
+  height: 45px;
+  /* display: flex; */
+  color: white;
+  align-items: center;
+  line-height: 40px;
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.black #scroll-container {
+  /* margin-left: 10vw; */
+  background: linear-gradient(150deg, #ff0000, #ffb800);
+
+  color: black;
+}
+
+@media (max-width: 600px) {
+  #scroll-container {
+    margin-bottom: 55px;
+  }
+}

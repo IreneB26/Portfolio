@@ -1,0 +1,139 @@
+.Proyectos_title {
+  margin-top: 10vh;
+  padding: 30px;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10vh;
+}
+
+.descripcion_proyecto {
+  width: 60vw;
+  margin-top: 50px;
+  /* padding: 0 15%; */
+}
+
+.tooltip_proyect .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #0500ff transparent transparent transparent;
+}
+
+.tooltip_proyect .tooltiptext {
+  visibility: hidden;
+  /* width: 155px; */
+  background-color: white;
+  border: solid 1px #0500ff;
+
+  font-family: "Syncopate", sans-serif;
+  color: #bd00ff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 31%;
+  margin-left: -60px;
+}
+
+.img_proyecto {
+  /* margin-top: 50px;  */
+  /* border: 1px solid red; */
+  width: 100vw;
+  height: 75vh;
+  object-fit: contain;
+}
+
+.skill_proyecto {
+  display: flex;
+  width: 60vw;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.img_skill_proyecto {
+  width: 60px;
+  height: 60px;
+
+  margin-right: 30px;
+}
+
+.button_proyectos {
+  display: flex;
+  width: 35vw;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 50px;
+}
+
+.tittle_tools_contain {
+  width: 60vw;
+}
+
+.tittle_tools {
+  margin-bottom: 40px;
+}
+
+.img_skill_container {
+  width: 60vw;
+}
+
+@media (max-width: 768px) {
+  .Proyectos_title {
+    width: 100vw;
+
+    margin-left: 0vw;
+  }
+
+  .button_proyectos {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 390px) {
+  .button_proyectos {
+    width: 90vw;
+  }
+}
+@media (max-width: 490px) {
+  .img_skill_container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+  }
+
+  .img_skill_proyecto {
+    margin-right: 0px;
+    margin: 15px;
+  }
+}
+
+/* dark mode */
+
+.black .descripcion_proyecto {
+  color: white;
+}
+
+@media (max-width: 425px) {
+  .img_proyecto {
+    /* margin-top: 50px; */
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 40vh;
+    object-fit: contain;
+  }
+}

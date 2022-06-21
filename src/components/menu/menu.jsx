@@ -1,46 +1,114 @@
-import { Menu, Moon, Close } from 'grommet-icons';
-import { useState } from 'react';
-import "./menu.css"
+import { Moon } from "grommet-icons";
+import { useState } from "react";
 
-export default function NavMenu(props){
+import { Link } from "react-router-dom";
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [menuActive, setMenuActive] = useState(false);
+import { motion } from "framer-motion";
 
+import "./menu.css";
 
+import { useDatabase, useDatabaseObjectData } from "reactfire";
+import { ref } from "firebase/database";
+// import Links from "../../data/info.json";
 
-    return(
-        <>
-        <nav className={isOpen === true ? ' nav_menu position_nav_menu' : 'nav_menu'} >
-            
-            <Moon className='theme' color='black' size='large' />
+export default function NavMenu(props) {
+  const databaseFB = useDatabase();
+  const counterRef = ref(databaseFB, "data");
+  const { status, data } = useDatabaseObjectData(counterRef);
 
-            <div onClick={() => {setIsOpen(!isOpen)}}  className={isOpen === true ? ' active' : ''}  id="navMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>  
+  // const links = Links.links;
 
-        </nav>
+  const [hover, setIsHover] = useState(false);
 
-        <article className={isOpen === true ? ' active_contain' : 'content_menu'} >
+  const container = {
+    // open: { transition: { duration: 1 }, opacity: 1, x: 0 },
+    closed: { transition: { duration: 1 }, opacity: 0, x: "100%" },
 
-        <div className='close_menu'>
-            
-        
+    open: {
+      // transition: { duration: 1 },
+      opacity: 1,
+      x: 0,
 
+      transition: {
+        duration: 1,
+        delayChildren: 0.8,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    closed: { opacity: 0 },
+    open: {
+      opacity: 1,
+    },
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [first, setFirst] = useState(true);
+  const [black, setBlack] = useState(false);
+
+  return (
+    <>
+      <nav
+        className={isOpen === true ? " nav_menu position_nav_menu" : "nav_menu"}
+      >
+        <div
+          onClick={() => {
+            setIsOpen(!isOpen);
+            setFirst(false);
+          }}
+          className={isOpen === true ? " active" : ""}
+          id="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <Moon
+          onClick={() => {
+            props.changeColor("black");
+            setBlack(!black);
+          }}
+          className={isOpen === true ? " theme opacity icon " : "theme icon "}
+          color={black === true ? "white" : "black"}
+          size="large"
+        />
+      </nav>
 
-            <ul className='List_menu'>
-               
-                <li className='Link_menu'>Sobre mi</li>
-                <li className='Link_menu'>Trabajos</li>
-                <li className='Link_menu'>Contacto</li>
+      {/* content_menu */}
 
-            </ul>
-
-        </article>
-
-        </>
-    )
-}   
+      <motion.article
+        className={first === true ? "content_menu " : "active_contain"}
+        animate={isOpen ? "open" : "closed"}
+        variants={container}
+      >
+        {data !== undefined && (
+          <ul className="List_menu">
+            {data.links.map((link) => (
+              <Link to={`${link.Link}`}>
+                {" "}
+                <motion.li
+                  variants={item}
+                  whileHover={{ scale: 1.1 }}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                  onMouseEnter={() => setIsHover(true)}
+                  onMouseLeave={() => setIsHover(false)}
+                  className="Link_menu"
+                >
+                  <p className="link_text"> {`${link.name}`}</p>
+                  <section className="hover_menu">
+                    <p className="text_menu_hover_animation">{`${link.texto_alt}`}</p>
+                  </section>
+                </motion.li>
+              </Link>
+            ))}
+          </ul>
+        )}
+      </motion.article>
+    </>
+  );
+}

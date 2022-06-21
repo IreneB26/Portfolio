@@ -1,0 +1,110 @@
+{ "frontend" : [
+    
+    { "name": "HTML", "image": "/public/imagenes/logos/html5.svg", "alt": "imagen logo HTML"},
+    { "name": "CSS", "image": "https://placekitten.com/200/100", "alt": "imagen logo CSS"},
+    { "name": "JavaScript", "image": "https://placekitten.com/200/200", "alt": "imagen logo JavaScript"},
+    { "name": "SCSS","image": "https://placekitten.com/200/400", "alt": "imagen logo SCSS"},
+    { "name": "React", "image": "https://placekitten.com/200/400", "alt": "imagen logo React" }
+
+  
+  ], 
+  "backend" : [
+    
+    { "name": "PHP", "image": "https://placekitten.com/200/300", "alt": "imagen logo PHP"},
+    { "name": "Python", "image": "https://placekitten.com/200/100", "alt": "imagen logo Python"}
+  
+  ],
+  "database" : [
+    
+    { "name": "MongoDB", "image": "https://placekitten.com/200/300", "alt": "imagen logo MongoDB"},
+    { "name": "MySQL", "image": "https://placekitten.com/200/100", "alt": "imagen logo MySQL"}
+  
+  ],
+  "tools" : [
+    
+    { "name": "Figma", "image": "https://placekitten.com/200/300", "alt": "imagen logo Figma"},
+    { "name": "Git", "image": "https://placekitten.com/200/100", "alt": "imagen logo Git"}
+  
+  ],
+
+  "links" : [
+
+
+    
+    { "name": "Sobre mi", "texto_alt": "Descubre más sobre mi 👀", "Link": "/"},
+    { "name": "Trabajos", "texto_alt": "Mira mis proyectos 💻​", "Link": "/proyectos"},
+    { "name": "Contacto", "texto_alt": "Cuentame que necesitas 📲​", "Link": "/contacto"}
+  
+  
+  ],
+  "Projects" : [
+    
+    { "id": "1","name": "About Me", "description": "En este proyecto el objetivo era crear una web personal básica en la que presentame y enseñar un poco quien soy y con que herramientas trabajo, empece creando un diseño en Figma que luego maquete.", "Link": "https://frontend.esatid3-2021.com/ireneb/project-alpha/", "github": "https://github.com/IreneB26/ProjectAlpha", 
+      
+      "tools":[
+        { "img":"html.svg", "name":"html icon"},
+        {"img":"css.svg", "name":"css icon"}, 
+        {"img":"javascript.svg", "name":"JavaScript icon"}, 
+        {"img":"sass.svg", "name":"sass icon"}, 
+        {"img":"php.svg", "name":"php icon"},
+        { "img":"figma.svg", "name":"figma icon"}, 
+        {"img":"git.svg", "name":"git icon"}
+     ]
+
+      
+      },
+    { "id": "2","name": "Event Experinece", "description": "En este proyecto el objetivo era crear una tienda en la que los usuarios pudiesen comprar entradas a conciertos o eventos, intentando implementar las máximas funcionalidades posible, y partiendo de maquetar un diseño previamente creado en Figma", "Link": "https://frontend.esatid3-2021.com/ireneb/project-beta/", "github": "https://github.com/IreneB26/ProjectBeta",
+      
+
+
+      "tools":[
+        { "img":"html.svg", "name":"html icon"},
+        {"img":"css.svg", "name":"css icon"}, 
+        {"img":"javascript.svg", "name":"JavaScript icon"}, 
+        {"img":"sass.svg", "name":"sass icon"}, 
+        {"img":"php.svg", "name":"php icon"},
+        {"img":"mysql.svg", "name":"mysql icon"},
+        { "img":"figma.svg", "name":"figma icon"}, 
+        {"img":"git.svg", "name":"git icon"}
+     ]
+
+      
+    
+      
+      
+      
+     },
+    { "id": "3","name": "Emojibook", "description": "Esta web esta toda construida en Wordpress, creando la plantilla desde cero, utilizando las funciones de Wordpress, el objetivo es aprender a utilizar Worpress creando entradas, post y diferentes articulos para mostrar en la web", "Link": "https://wordpress.esatid3-2021.com/ireneb/emojibook/", "github": "https://github.com/IreneB26/ProjectBeta",
+      
+
+      "tools":[
+        { "img":"html.svg", "name":"html icon"},
+        {"img":"css.svg", "name":"css icon"}, 
+        {"img":"wordpress.svg", "name":"wordpress icon"}, 
+        {"img":"php.svg", "name":"php icon"},
+        {"img":"git.svg", "name":"git icon"}
+     ]
+
+
+     
+      
+    
+      },
+    { "id": "4","name": "Social Sport", "description": "Este es mi proyecto final del Grado superior de Desarrollo de aplicaciones web, en este proyecto cree una web como si fuese la de un gimansio, en ella la gente tenia un foro tanto en el que podian interactuar entre ellos asi como lanza preguntas y respoderse, como una tienda en la que comprar material deportivo.", "Link": "https://frontend.esatid3-2021.com/ireneb/test/2119_gymso_fitness", "github": "https://github.com/IreneB26/GYM_PR ", 
+    
+
+    "tools":[
+      { "img":"html.svg", "name":"html icon"},
+      {"img":"css.svg", "name":"css icon"}, 
+      {"img":"javascript.svg", "name":"JavaScript icon"}, 
+      {"img":"php.svg", "name":"php icon"},
+      {"img":"mysql.svg", "name":"mysql icon"},
+      {"img":"figma.svg", "name":"figma icon"}, 
+      {"img":"git.svg", "name":"git icon"}
+   ]
+      
+       }
+  
+  
+  ]
+}
