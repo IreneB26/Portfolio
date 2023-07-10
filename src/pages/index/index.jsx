@@ -43,7 +43,7 @@ export default function Index() {
           <Titulo contenido="Hola, soy Irene Bargues" />
 
           <p className="descripcion">
-            Soy font-end developer, y deseñadora UX/UI. Hago páginas web
+            Soy font-end developer, y diseñadora UX/UI. Hago páginas web
             accesibles e innovadoras, y me encanta seguir aprendiendo.
           </p>
           <a
